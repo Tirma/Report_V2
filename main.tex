@@ -1,0 +1,182 @@
+\documentclass[a4paper,twoside,11pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{todonotes}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+%\setmarginsrb{30mm}{20mm}{20mm}{20mm}{0pt}{0mm}{0pt}{0mm}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO,RE]{\rightmark}
+
+\title{Simulation and characterization of integrated optics beam combiners for astrointerferometry}								% Title
+\author{Thomas Poletti}								% Author
+\date{\today}											% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\graphicspath{ {images/} }
+
+\newcommand\frontmatter{%
+    \clearpage
+  %\@mainmatterfalse
+  \pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+    \clearpage
+ % \@mainmattertrue
+  \pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+  \if@openright
+    \clearpage
+  \else
+    \clearpage
+  \fi
+ % \@mainmatterfalse
+   }
+
+   
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[nottoc]{tocbibind}
+
+\begin{document}
+
+\listoftodos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+	\begin{minipage}{0.5\textwidth}
+		\begin{flushleft} 
+    %\vspace*{0.5 cm}
+    \includegraphics[scale = 0.6]{phelma.png}\\[1.0 cm]	% University Logo
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.5\textwidth}
+            
+			\begin{flushright} 
+    
+    %\vspace*{0.5 cm}
+    \includegraphics[scale = .9]{university.png}\\[1.0 cm]	% University Logo
+		\end{flushright}
+        
+	\end{minipage}\\[3 cm]
+	
+    \centering
+    \vspace*{0.5 cm}
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+    \textsc{\Large I. Physikalisches Institut \\
+Universität zu Köln}\\[5 cm]	% University Name
+	%\textsc{\Large Grenoble INP-Phelma}\\[0.5 cm]				% Course Code
+
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Author :} \\
+			Thomas Poletti\\
+  %           13103057\\
+          M1 Physics and NanoSciences\\
+          School-year 2017-2018\\
+   %         Semester\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+   			\emph{Supervisor:}\\
+			Pr. Dr. Lucas Labadie\\
+            labadie@ph1.uni-koeln.de\\
+		\end{flushright}
+        
+	\end{minipage}\\[2 cm]
+	
+    
+    
+	
+\end{titlepage}
+
+\frontmatter
+\begin{abstract}
+   abstract-text
+\end{abstract}
+\renewcommand{\abstractname}{Résumé}
+\newpage
+\begin{abstract}
+   Résumé ici
+\end{abstract}
+
+\newpage
+\tableofcontents
+%\addcontentsline{toc}{section}{\listfigurename}
+%\addcontentsline{toc}{section}{\listtablename}
+\listoffigures
+\listoftables
+
+\clearpage
+
+\mainmatter
+\section{Motivation and scientific background}
+
+\todo[inline]{- quoi qu’est-ce l’interferometrie, intérêt par rapport à l’observation par un télescope mono-pupille en terme
+de résolution angulaire
+- nulling, contraintes
+- schema hi-5, explications
+- VLTI
+- bandes d’observation
+- unités astro
+- Bases de la BeamPropMethod}
+
+\section{Simulation of Discret Beam Combiner}
+    \subsection{Monochromatic light}
+        \subsubsection{Mathematical formalism}
+        \subsubsection{Influence of geometrical parameters}
+        \subsubsection{Retrieving the visibility function}
+    \subsection{Polychromatic light}
+        \subsubsection{Mathematical formalism}
+        \subsubsection{Influence of the bandwidth}
+        \subsubsection{Retrieving the visibility function}
+        
+\section{Laboratory characterization of beam combiners}
+    \subsection{Asymmetric couplers}
+    \subsection{MMI}
+    \subsection{Discrete Beam Combiner}
+
+\section{Conclusion and Further-work}
+
+\backmatter
+\appendix
+\section{Appendix}
+    \subsection{Appendix 1}
+\end{document}    
