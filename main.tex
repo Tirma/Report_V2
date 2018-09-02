@@ -9,12 +9,37 @@
 \usepackage{url}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{textcomp}
 \graphicspath{{images/}}
 \usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{vmargin}
+\usepackage{tikz}
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 %\setmarginsrb{30mm}{20mm}{20mm}{20mm}{0pt}{0mm}{0pt}{0mm}
+
+
+\usepackage{multicol}
+%\usepackage{nonfloat}
+
+%\usepackage{amsfont}
+\usepackage{amssymb}
+
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+
+\usepackage[scientific-notation=true]{siunitx}
+\usepackage{subcaption}
+%\usepackage[table,xcdraw]{xcolor}
+%\usepackage[squaren,Gray]{SIunits}
+\usepackage{todonotes}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage{glossaries}
+\makeglossaries
+\input{glossaire.gls}
 
 \pagestyle{fancy}
 \fancyhead{}
@@ -68,6 +93,11 @@
 }
 
 \usepackage[nottoc]{tocbibind}
+
+
+
+
+\makeglossary
 
 \begin{document}
 
@@ -136,17 +166,22 @@ Universität zu Köln}\\[5 cm]	% University Name
 \begin{abstract}
    Résumé ici
 \end{abstract}
+\renewcommand{\abstractname}{Introduction}
 
 \newpage
 \tableofcontents
-%\addcontentsline{toc}{section}{\listfigurename}
-%\addcontentsline{toc}{section}{\listtablename}
 \listoffigures
 \listoftables
 
 \clearpage
 
 \mainmatter
+
+\begin{abstract}
+\input{intro.tex}
+\end{abstract}
+
+
 \section{Motivation and scientific background}
 
 \todo[inline]{- quoi qu’est-ce l’interferometrie, intérêt par rapport à l’observation par un télescope mono-pupille en terme
@@ -158,25 +193,56 @@ de résolution angulaire
 - unités astro
 - Bases de la BeamPropMethod}
 
-\section{Simulation of Discret Beam Combiner}
+\section{Simulation of the DBC}
+    
+    The discrete beam combiner is a component made of multiple straight waveguides close to each other. It has been demonstrated that in the case of a $N$ telescope \gls{dbc}, an array of more than $N^2$ waveguides is needed for efficient operation of the \gls{dbc} \cite{minardi1}. But at this point is hasn't been studied the impact of other geometrical parameters such as the spacing between each waveguides. 
+    
+    The component studied is formed of 23 outputs to combine four telescopes. A cross-section of it is shown on Fig. \ref{tikz:ZigZagCrossSection}. Both the input configuration and the "Zig-Zag" shape have already been optimised. The next part focuses on optimising the \gls{dbc} regarding $P_x$, $P_y$, $width$, $height$ and the length of the \gls{dbc} part (the notations refers to Fig. \ref{tikz:ZigZagCrossSection}) in the case of monochromatic light. In a second part the performances of the optimised component regarding the bandwidth of the input light are simulated. All simulation are performed using the commercial software Beamprop\textcompwordmark in scalar mode (a full-vectorial mode would have been more accurate but didn't show different results for both TE and TM polarisation regarding the condition number of the V2PM matrix -see next section-), correlation mode and transparent boundary condition. The grid size was chosen as a balance between computation time and accuracy.
+    \input{figures/DBC_fig.tex}
+
     \subsection{Monochromatic light}
+
         \subsubsection{Mathematical formalism}
-        \subsubsection{Influence of geometrical parameters}
-        \subsubsection{Retrieving the visibility function}
-    \subsection{Polychromatic light}
-        \subsubsection{Mathematical formalism}
-        \subsubsection{Influence of the bandwidth}
-        \subsubsection{Retrieving the visibility function}
+        \input{chapters/simu/math_mono.tex}
         
+        \subsubsection{Impact of evanescent coupling on the output power}
+        \input{chapters/simu/evan.tex}
+        
+        \subsubsection{Influence of geometrical parameters}
+        \input{chapters/simu/geom.tex}
+        
+        \subsubsection{Retrieving the visibility function}
+        \input{chapters/simu/retriev_mono.tex}
+    
+    \subsection{Polychromatic light}
+    
+        \subsubsection{Mathematical formalism}
+        \input{chapters/simu/math_poly.tex}
+        
+        \subsubsection{Influence of the bandwidth}
+        \input{chapters/simu/bw.tex}
+        
+        \subsubsection{Retrieving the visibility function}
+        \input{chapters/simu/retriev_poly.tex}
+
 \section{Laboratory characterization of beam combiners}
+
     \subsection{Asymmetric couplers}
+    
     \subsection{MMI}
+    
     \subsection{Discrete Beam Combiner}
 
-\section{Conclusion and Further-work}
+\section*{Conclusion and Further-work}
 
 \backmatter
 \appendix
 \section{Appendix}
     \subsection{Appendix 1}
+
+\printglossary
+    
+\bibliographystyle{alpha}
+\bibliography{biblio}
+
 \end{document}    
