@@ -1,1 +1,63 @@
- 
+As stated before the "Zig-Zag" \gls{dbc} is composed of 23 outputs and can combine the light from 4 individual telescopes. This component has the particularity that all the information about the coherence function of the studied object is included in the way the 23 outputs are related to each other \cite{tatulli}. In the case of monochromatic light the theory is exact. We will do a brief overview of the theoretical background in this part. For further reading the reader can refer to \cite{tatulli, saviauk, Diener2017}.
+
+In this part we will consider the light combined from the input $A$ and $B$ at the $n^{th}$ output. In that case the intensity $I_n$ at the output can be expresed as :
+\begin{equation}\label{eq:intermono}
+ I_n = \kappa_AI_A+\kappa_BI_B+2\sqrt{\kappa_AI_A\kappa_BI_B}V_{AB}^{inst}V_{AB}^{obj}\cos(\phi_{AB}^{inst}+\phi_{AB}^{obj})
+\end{equation}
+
+In this equation $\kappa_i$ is the transmission coefficient from the input $i$ to the considered output. $inst$ and $obj$ relates the visibility/phases of the instrument and of the observed object. Equation \ref{eq:intermono} can easily be reduced to Eq.\ref{eq:intermonoreduced} in which the produce of the instrumental and object visibility are reduced in $V_{AB}$.
+
+\begin{equation}\label{eq:intermonoreduced}
+  I_n = \kappa_AI_A+\kappa_BI_B+2\sqrt{\kappa_AI_A\kappa_BI_B}V_{AB}\left(\cos(\phi_{AB}^{inst})\cos(\phi_{AB}^{obj})-\sin(\phi_{AB}^{inst})\sin(\phi_{AB}^{obj})\right)
+\end{equation}
+
+From Eq.\ref{eq:intermonoreduced} the problem of getting the object mutual coherence function can be reduced to the produce of a matrix and a vector. 
+Thus the
+characteristics of the input fields can be linked to the output
+intensities by the relation :
+\begin{equation}
+  \vec{I} = V2PM \times \vec{V}
+\end{equation}
+In which $\vec{I} = (I_1,...I_M)^T$ represent the intensities at the M outputs, \\ \resizebox{\textwidth}{!}{ $\vec{V} =
+(I_1,...,I_M,V_{12}^{obj}\sqrt{I_1I_2}cos(\Phi_{21}^{obj}),V_{12}^{obj}\sqrt{I_1I_2}sin(\Phi_{21}^{obj}),...,V_{N-1,N}^{obj}\sqrt{I_{N-1}I_N}cos(\Phi_{N,(N-1)}^{obj}),V_{N-1,N}^{obj}\sqrt{I_{N-1}I_N}sin(\Phi_{N,(N-1)}^{obj}))$}
+and the visibility to pixel matrix V2PM represent the beam combiner's properties. An example of a V2PM for an hypothetical beam combiner
+with 3 inputs and 2 outputs is displayed in Figure \ref{v2pm.expl}
+
+\begin{figure}[h]
+\begin{equation*}
+\resizebox{\textwidth}{!}{
+ $ \begin{pmatrix}
+  \kappa_{11} & \kappa_{21} & \kappa_{31} &
+  2V_{12}^{1}\sqrt{\kappa_{11}\kappa_{21}}cos(\Phi_{12}^{inst}) &
+  -2V_{12}^{1}\sqrt{\kappa_{11}\kappa_{21}}sin(\Phi_{12}^{inst}) &
+  2V_{13}^{1}\sqrt{\kappa_{11}\kappa_{31}}cos(\Phi_{13}^{inst}) &
+ - 2V_{13}^{1}\sqrt{\kappa_{11}\kappa_{31}}sin(\Phi_{13}^{inst}) &
+  2V_{23}^{1}\sqrt{\kappa_{21}\kappa_{31}}cos(\Phi_{23}^{inst}) & -2V_{23}^{1}\sqrt{\kappa_{21}\kappa_{31}}sin(\Phi_{23}^{inst})\\
+  \kappa_{12} & \kappa_{22} & \kappa_{32} &
+  2V_{12}^{2}\sqrt{\kappa_{12}\kappa_{22}}cos(\Phi_{12}^{inst}) &
+  -2V_{12}^{2}\sqrt{\kappa_{12}\kappa_{22}}sin(\Phi_{12}^{inst}) &
+  2V_{13}^{2}\sqrt{\kappa_{12}\kappa_{32}}cos(\Phi_{13}^{inst}) &
+ - 2V_{13}^{2}\sqrt{\kappa_{12}\kappa_{32}}sin(\Phi_{13}^{inst}) &
+  2V_{23}^{2}\sqrt{\kappa_{22}\kappa_{32}}cos(\Phi_{23}^{inst}) &   -2V_{23}^{2}\sqrt{\kappa_{22}\kappa_{32}}sin(\Phi_{23}^{inst})
+
+\end{pmatrix}
+$}
+\end{equation*}
+\caption{An hypothetical V2PM matrix for a 3 to 2 beam combiner. All visibility and phases in the matrix are the instrumental ones.}
+\label{v2pm.expl}
+\end{figure}
+
+One can find the pixel to visibility matrix by inverting the V2PM
+matrix with the relation \ref{eq:p2vm} and then the astronomical
+information from $\vec{V}$. To be consistent with the notation introduced in \cite{saviauk},   $\vec{V} =
+(\Gamma_{11},...,\Gamma_{MM},\mathcal{R}\Gamma_{12},\mathcal{I}\Gamma_{12},...,\mathcal{R}\Gamma_{N(N-1)},\mathcal{I}\Gamma_{N(N-1)})$ the object phase and visibility can be extracted by :
+$$
+V_{ij}^{obj} = \sqrt{\frac{(\mathcal{R}\Gamma_{ij})^2+(\mathcal{I}\Gamma_{ij})^2}{\Gamma_{ii}\Gamma_{jj}}} \qquad
+\Phi_{ij}^{obj} = arctan(\frac{\mathcal{I}\Gamma_{ij}}{\mathcal{R}\Gamma_{ij}}) \quad i\neq j
+$$
+
+\begin{equation}
+  P2VM = (V2PM^T\times V2PM)^{-1}\times V2PM^{T} \label{eq:p2vm}
+\end{equation}  
+
+In the light of this formalism the retrieved coherence function from the \gls{P2VM} can be inaccurate and one has to minimize the condition number of the matrix in order to minimize the possibility of a strong amplification of measure inaccuracy. For further explanation on this subject refers to Annexe \ref{an:cond}

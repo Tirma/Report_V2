@@ -4,3 +4,5 @@
 \newacronym{bl}{BL}{baseline (the distance between the telescopes)}
 \newacronym{io}{IO}{Integrated optic}
 \newacronym{mmi}{MMI}{Multi Mode Interferometer}
+\newacronym{V2PM}{V2PM}{Visibility to Pixel Matrix}
+\newacronym{P2VM}{P2VM}{Pixel to Visibility Matrix}

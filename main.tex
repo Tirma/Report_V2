@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-
+\usepackage[noadjust]{cite}
 \usepackage{todonotes}
 \usepackage{natbib}
 \usepackage{url}
@@ -197,11 +197,12 @@ de résolution angulaire
     
     The discrete beam combiner is a component made of multiple straight waveguides close to each other. It has been demonstrated that in the case of a $N$ telescope \gls{dbc}, an array of more than $N^2$ waveguides is needed for efficient operation of the \gls{dbc} \cite{minardi1}. But at this point is hasn't been studied the impact of other geometrical parameters such as the spacing between each waveguides. 
     
-    The component studied is formed of 23 outputs to combine four telescopes. A cross-section of it is shown on Fig. \ref{tikz:ZigZagCrossSection}. Both the input configuration and the "Zig-Zag" shape have already been optimised. The next part focuses on optimising the \gls{dbc} regarding $P_x$, $P_y$, $width$, $height$ and the length of the \gls{dbc} part (the notations refers to Fig. \ref{tikz:ZigZagCrossSection}) in the case of monochromatic light. In a second part the performances of the optimised component regarding the bandwidth of the input light are simulated. All simulation are performed using the commercial software Beamprop\textcompwordmark in scalar mode (a full-vectorial mode would have been more accurate but didn't show different results for both TE and TM polarisation regarding the condition number of the V2PM matrix -see next section-), correlation mode and transparent boundary condition. The grid size was chosen as a balance between computation time and accuracy.
+    The component studied is formed of 23 outputs and four inputs to combine the light from four individual telescopes. A cross-section of it is shown on Fig. \ref{tikz:ZigZagCrossSection}. Both the input configuration and the "Zig-Zag" shape have already been optimised. After a brief explanation of the theory behind the \gls{dbc} we will focus on optimising it regarding $P_x$, $P_y$, $width$, $height$ and the length of the \gls{dbc} part (the notations refers to Fig. \ref{tikz:ZigZagCrossSection}) in the case of monochromatic light. In a second part the performances of the optimised component regarding the bandwidth of the input light are simulated. All simulation are performed using the commercial software Beamprop\textcompwordmark{} in scalar mode (a full-vectorial mode would have been more accurate but didn't show much different results for both TE and TM polarisation regarding the condition number of the \gls{V2PM} -see next section-), correlation mode and transparent boundary condition. The grid size was chosen as a balance between computation time and accuracy.
     \input{figures/DBC_fig.tex}
 
     \subsection{Monochromatic light}
 
+    In this section is shown the impact on the performances of the \gls{dbc} regarding its geometry. Two main parameters are studied, the condition number of the \gls{V2PM} and the throughput as it hadn't been done before. 
         \subsubsection{Mathematical formalism}
         \input{chapters/simu/math_mono.tex}
         
@@ -238,7 +239,8 @@ de résolution angulaire
 \backmatter
 \appendix
 \section{Appendix}
-    \subsection{Appendix 1}
+    \subsection{The condition number}\label{an:cond}
+    \input{chapters/condition.tex}
 
 \printglossary
     

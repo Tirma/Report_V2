@@ -1,4 +1,12 @@
-\begin{thebibliography}{Min12}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{TMC{\etalchar{+}}07}
+
+\bibitem[DTL{\etalchar{+}}17]{Diener2017}
+Romina Diener, Jan Tepper, Lucas Labadie, Thomas Pertsch, Stefan Nolte, and
+  Stefano Minardi.
+\newblock Towards 3d-photonic, multi-telescope beam combiners for mid-infrared
+  astrointerferometry.
+\newblock 25:19262, 08 2017.
 
 \bibitem[Lab08]{labeye}
 Pierre Labeye.
@@ -11,5 +19,21 @@ S.~Minardi.
 \newblock Photonic lattices for astronomical interferometry.
 \newblock {\em Monthly Notices of the Royal Astronomical Society},
   422(3):2656--2660, 2012.
+
+\bibitem[SMD{\etalchar{+}}13]{saviauk}
+Allar Saviauk, Stefano Minardi, Felix Dreisow, Stefan Nolte, and Thomas
+  Pertsch.
+\newblock 3d-integrated optics component for astronomical
+  spectro-interferometry.
+\newblock 52:4556--4565, 07 2013.
+
+\bibitem[TMC{\etalchar{+}}07]{tatulli}
+Eric Tatulli, F~Millour, A~Chelli, Gilles Duvert, Bram Acke, Oscar
+  Hernandez~Utrera, K~H.~Hofmann, S~Kraus, Fabien Malbet, Mege Pierre, Romain
+  Petrov, Michael Vannier, Gerard Zins, P~Antonelli, Udo Beckmann, Y~Bresson,
+  Michel Dugue, S~Gennari, L~Glück, and Noemi Ventura.
+\newblock Interferometric data reduction with amber/vlti. principle,
+  estimators, and illustration.
+\newblock 464, 03 2007.
 
 \end{thebibliography}

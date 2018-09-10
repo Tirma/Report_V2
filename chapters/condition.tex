@@ -1,0 +1,28 @@
+Considering the following system $A\vec{x}=\vec{b}$ where A is the
+matrix describing our system (A is a matrix with real coefficients). An error $\vec{\delta x}$ on $\vec{x}$
+will lead to an error $\vec{\delta b}$ on $\vec{b}$. The aim is to
+know how much bigger or smaller is $\frac{\left\|\vec{\delta x}
+  \right\|}{\left\|\vec{x} \right\|}$ compared to $\frac{\left\|\vec{\delta b}
+  \right\|}{\left\|\vec{b} \right\|}$ (i.e how much an error is
+magnified by the A matrix).
+
+In the case where A in neither symmetric nor square. Then the matrix
+$A^TA$ is a square symmetric matrix and Then can be diagonalized. Lets
+call $\lambda_i$ and $\vec{u_i}$ its eigenvalues and eigenvectors. We
+can write : $$ A^TA \vec{u_i} = \lambda_i \vec{u_i}$$
+Moreover $$\left\| A\vec{x}\right\|^2 = \vec{x}^TA^TA\vec{x} =
+\left\| \vec{b}\right\|^2$$
+So $\left\| \vec{b} \right\|^2 \leq max(|\lambda_i|) \left\| \vec{x}
+\right\|^2$ and $\left\| \vec{\delta b} \right\|^2 \geq
+min(|\lambda_i|) \left\| \vec{\delta x}
+\right\|^2$ and then :
+$$\boxed{
+\frac{\left\|\vec{\delta x}
+  \right\|}{\left\|\vec{x} \right\|} \leq \frac{\sqrt{max(|\lambda_i|)}}{\sqrt{min(|\lambda_i|)}} \frac{\left\|\vec{\delta b}
+  \right\|}{\left\|\vec{b} \right\|}
+}$$
+
+The number $\frac{\sqrt{max(|\lambda_i|)}}{\sqrt{min(|\lambda_i|)}}$
+where $min(|\lambda_i|)$ is the minimal non zero eigenvalue of $A^TA$,
+is called the condition number of the A matrix. It means how much an
+error on the right part of the system can be magnified by the A matrix.
