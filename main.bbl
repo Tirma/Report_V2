@@ -1,6 +1,17 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{TMC{\etalchar{+}}07}
 
+\bibitem[BEAS07]{saleh_teich}
+Malvin Carl~Teich Bahaa E. A.~Saleh.
+\newblock {\em Fundamentals of Photonics}.
+\newblock Wiley Series in Pure and Applied Optics. Wiley-Interscience, 2
+  edition, 2007.
+
+\bibitem[DM91]{marcuse}
+Paul Liao~(Eds.) Dietrich~Marcuse.
+\newblock {\em Theory of Dielectric Optical Waveguides}.
+\newblock Academic Press, 2 sub edition, 1991.
+
 \bibitem[DTL{\etalchar{+}}17]{Diener2017}
 Romina Diener, Jan Tepper, Lucas Labadie, Thomas Pertsch, Stefan Nolte, and
   Stefano Minardi.
