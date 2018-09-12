@@ -18,12 +18,12 @@
 \contentsline {paragraph}{adaptability to other wavelength}{14}{section*.29}
 \contentsline {subsection}{\numberline {2.2}Polychromatic light}{16}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Mathematical formalism}{16}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Influence of the bandwidth}{16}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Retrieving the visibility function}{16}{subsubsection.2.2.3}
-\contentsline {section}{\numberline {3}Laboratory characterization of beam combiners}{16}{section.3}
-\contentsline {subsection}{\numberline {3.1}Asymmetric couplers}{16}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}MMI}{16}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Discrete Beam Combiner}{16}{subsection.3.3}
-\contentsline {section}{\numberline {A}Appendix}{17}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}The condition number}{17}{subsection.A.1}
-\contentsline {section}{Bibliography}{18}{section*.35}
+\contentsline {subsubsection}{\numberline {2.2.2}Influence of the bandwidth}{18}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Retrieving the visibility function}{18}{subsubsection.2.2.3}
+\contentsline {section}{\numberline {3}Laboratory characterization of beam combiners}{18}{section.3}
+\contentsline {subsection}{\numberline {3.1}Asymmetric couplers}{18}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}MMI}{18}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Discrete Beam Combiner}{18}{subsection.3.3}
+\contentsline {section}{\numberline {A}Appendix}{19}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}The condition number}{19}{subsection.A.1}
+\contentsline {section}{Bibliography}{20}{section*.35}
