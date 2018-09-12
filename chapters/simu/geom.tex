@@ -348,7 +348,7 @@ were down to 0.4 or less.
  
 \end{figure}
 
-\subsection{Effect of polarization on the retrieved parameters}
+\paragraph{Effect of polarization on the retrieved parameters}
 To this point no polarization effects has been simulated. In this part the V2PM matrix is calculated using monochromatic TE and TM polarized light. It is then studied the impact of using a TM polarization calibrated V2PM on the TE polarization data to retrieve the astronomical parameters (and vice et versa). 
 
 First of all the V2PM calibrated matrix using TE polarised light show a condition number of 6.203 and it is  6.124 for the TM polarized light. In the case of the scalar field (no polarization effect) the condition number was 6.161 which is almost the mean of TE and TM ones. 
@@ -388,3 +388,28 @@ Before simulating the \gls{dbc} using polychromatic light the dependence of the 
     \caption{Condition number of monochromatic V2PM matrices at different wavelength. (a) for the component without fan-out, (b) for the component with fan-out. The geometry of the component is the optimized one (see text for details)}
     \label{fig:cond_mono_multi}
 \end{figure}
+
+
+
+The evolution of the V2PM's condition number regarding the geometrical parameters and the wavelength has been studied and an optimal configuration has been found. This configuration ensures a condition number of approximately 6 which means that an error on the measured output wouldn't be magnified more than 6 times (in the worst case) by the retrieving algorithm. The evolution of the "usable" throughput through a defined surface has also been studied and result of more than 96\% in the case of the component with fanout and 70\% without. This throughput doesn't include the losses from coupling nor Fresnel which should be predominant for this component. The optimised parameters are given in Tab.\ref{tab:optimised_parameters}
+
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|}
+%\cline{2-2}
+\multicolumn{1}{c}{} &\multicolumn{1}{c}{} \\ \cline{1-2}
+  $P_x$ & $\num{24}$ \\ \cline{1-2}
+  $P_y$ & $\num{10,8}$\\\cline{1-2}
+  $width$ & $\num{9,5}$ \\\cline{1-2}
+  $height$ & $\num{17}$  \\\cline{1-2}
+  $\delta$ & $\num{0,005}$  \\\cline{1-2}
+  $\lambda$ & $\num{3,4}$ \\\cline{1-2}
+  $L_c$ & $\num{22000}$  \\\cline{1-2}
+  $L_i$ & $\num{10000}$  \\\cline{1-2}
+  background index & $\num{2,31}$  \\\cline{1-2}
+\end{tabular}\\
+\end{center}
+\caption{Optimised set of parameters (distance unit in \si{\micro\meter})}
+\label{tab:optimised_parameters}
+\end{table}

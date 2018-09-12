@@ -47,7 +47,7 @@ $}
 \label{v2pm.expl}
 \end{figure}
 
-One can find the pixel to visibility matrix by inverting the V2PM
+One can find the \gls{P2VM} by inverting the V2PM
 matrix with the relation \ref{eq:p2vm} and then the astronomical
 information from $\vec{V}$. To be consistent with the notation introduced in \cite{saviauk},   $\vec{V} =
 (\Gamma_{11},...,\Gamma_{MM},\mathcal{R}\Gamma_{12},\mathcal{I}\Gamma_{12},...,\mathcal{R}\Gamma_{N(N-1)},\mathcal{I}\Gamma_{N(N-1)})$ the object phase and visibility can be extracted by :
@@ -60,4 +60,14 @@ $$
   P2VM = (V2PM^T\times V2PM)^{-1}\times V2PM^{T} \label{eq:p2vm}
 \end{equation}  
 
-In the light of this formalism the retrieved coherence function from the \gls{P2VM} can be inaccurate and one has to minimize the condition number of the matrix in order to minimize the possibility of a strong amplification of measure inaccuracy. For further explanation on this subject refers to Annexe \ref{an:cond}
+In the light of this formalism the retrieved coherence function from the \gls{P2VM} can be inaccurate and one has to minimize the condition number of the matrix in order to minimize the possibility of a strong amplification of measure inaccuracy. For further explanation on this subject refers to Annexe \ref{an:cond}.
+
+To characterise the instrumental phase and visibility at an output a coherent source is used (thus the object's visibility is 1 and the phase visibility is 0). A cosine is fitted to the simulated curve of the intensity at an output. Than photocorrection\ref{eq:photocorrection} is then applied using the intensity simulated with only one input beam used. This process is repeated for all 6 baselines to build all the V2PM. 
+
+\begin{equation}
+ \label{eq:photocorrection}
+ V_n(x) = \frac{I_n(x)-\kappa_AI_A-\kappa_BI_B}{2\sqrt{\kappa_AI_A\kappa_BI_B}} = V_{AB}^{inst}V_{AB}^{obj}\cos(\phi_{AB}^{inst}+\phi_{AB}^{obj})
+\end{equation}
+
+
+
