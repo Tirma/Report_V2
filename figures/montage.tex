@@ -1,0 +1,98 @@
+\documentclass[pstricks]{standalone}
+\usepackage{pst-optexp}
+\usepackage{stackengine}
+\setstackEOL{\\}
+\usepackage{auto-pst-pdf}
+\usepackage{forest}
+
+
+
+\begin{document}
+
+\begin{pspicture}[showgrid=true](40,10)\def\stackalignment{c}
+	\psset{pswarning}
+	%\psset{useNA=false}
+	\pnode(11,7){BS2}
+	\pnode(14,7){BS3}
+	\pnode(11,4){BS4}
+	\pnode(14,4){BS5}
+	\pnode(16,7){M4}
+	\pnode(14,9){M1}
+	\pnode(11,2){M3}
+	\pnode(9,4){M2}
+	\pnode(18,4){FocLens}
+	\pnode(18,4){FocLens}
+	\pnode(22,4){FocLens2}
+	\pnode(25,4){ZoomLens}
+	\pnode(26.5,4){CAM}
+
+	\pnode(3,7){FS}\pnode(4,7){PH}\pnode(3.8,7){L1}\pnode(7,7){BS1}
+	\pnode(7,2){MILas}\pnode(6,7){Filter}
+	\pnode(5,2){Laser}
+	\psline[linecolor=red](1,7)(FS)
+
+\begin{optexp}	%\addtopsstyle{Beam}{linewidth=2\pslinewidth}
+	
+	\optsource[compname=SRC,sourcesize=0 0,innerlabel,beamdiv=10,beamangle=0](2.8,7)(2.9,7){}
+	\pinhole[compname=NPH0,position=0,labelangle=180](FS)(PH){PH}
+	%\psline[style=Beam](FS)(L1)(BS1)(MILas)(Laser)(MILas)(BS1)
+	\lens[n=1.5,compname=NL0,position=1,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](PH)(L1){\Centerstack{AC \\ 50mm}}	
+	\optplate[compname=NF0,position=.4,labeloffset=1.2,labelangle=180](L1)(Filter){\Centerstack{Filter \\ 3.745µm\\ BW 69nm}}
+	\pinhole[compname=NPH1,position=0,labelangle=180](Filter)(BS1){APH}
+
+
+	
+	
+	\beamsplitter[compname=NBS1,labelangle=-90](MILas)(BS1)(BS2){BS}
+	\mirror[compname=NM0,mirrortype=extended](Laser)(MILas)(BS1){Mirror}	
+	\optbox[startbox,optboxwidth=1.5,optboxheight=0.9,labeloffset=0](Laser)(Laser){\Centerstack{Laser \\ 3.39µm}}
+
+			\lens[n=2,compname=NL1,position=0.25,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](MILas)(BS1){\Centerstack{AS \\ 11mm}}	
+\lens[n=2,compname=NL2,position=0.65,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](MILas)(BS1){\Centerstack{PC \\ 150mm}}	
+
+%%% The actual Michelson
+
+
+	%\psline[style=Beam](BS1)(BS2)(BS3)(BS5)(BS4)(BS2)
+
+%	\psline[style=Beam](BS3)(M4)(BS3)(M1)
+%	\psline[style=Beam](BS4)(M3)(BS4)(M2)(BS5)(CAM)
+
+	\beamsplitter[compname=NBS2,labelangle=0](BS1)(BS2)(BS4){BS}
+	\beamsplitter[compname=NBS3,labelangle=-90](M4)(BS3)(BS5){BS}	
+	\beamsplitter[compname=NBS4,labelangle=90](M3)(BS4)(BS5){BS}	
+	\beamsplitter[compname=NBS5,labelangle=0](M1)(BS5)(FocLens){BS}	
+	
+
+	\mirror[compname=NM2,mirrortype=extended](BS4)(M2)(BS4){\Centerstack{Mirror\\ 2}}	
+
+	\optsource[compname=SRC2,sourcesize=0 0,innerlabel,beamdiv=10,beamangle=0](2.85,7)(2.95,7){}
+
+	\mirror[compname=NM3,mirrortype=piezo,labeloffset=1](BS4)(M3)(BS4){\Centerstack{Delay Line\\ Mirror 3}}	
+	\mirror[compname=NM4,mirrortype=piezo,labeloffset=1.4](BS3)(M4)(BS3){\Centerstack{Delay Line\\ Mirror 4}}	
+	\mirror[compname=NM1,mirrortype=piezo,labeloffset=1.3,labelangle=90](BS3)(M1)(BS3){\Centerstack{Delay Line\\ Mirror 1}}	
+
+
+
+
+\lens[n=1.5,compname=NL3,position=0.9,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](BS5)(FocLens){\Centerstack{AC \\ 50mm}}	
+\lens[n=1.5,compname=NL4,position=1,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](FocLens)(FocLens2){\Centerstack{AC \\ 50mm}}	
+\lens[n=1.5,compname=NL5,position=1,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](FocLens)(ZoomLens){\Centerstack{AC \\ 50mm}}	
+
+\optbox[endbox,compname=NCAM,optboxwidth=1.5,optboxheight=0.9,labeloffset=0](ZoomLens)(CAM){\Centerstack{IR \\Camera}}
+
+\end{optexp}
+
+\addtopsstyle{Beam}{beamwidth=0.01, fillstyle=solid, linecolor = green, fillcolor=green, opacity = 0.2}
+
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS4}{NM3}{NBS4}{NBS5}{NL3}{NL4}{NL5}{NCAM}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS4}{NM2}{NBS4}{NBS5}{NL3}{NL4}{NL5}{NCAM}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS3}{NM4}{NBS3}{NBS5}{NL3}{NL4}{NL5}{NCAM}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS3}{NM1}{NBS3}{NBS5}{NL3}{NL4}{NL5}{NCAM}
+
+
+
+
+\end{pspicture}
+
+\end{document}
