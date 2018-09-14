@@ -9,7 +9,7 @@
 
 \begin{document}
 
-\begin{pspicture}[showgrid=true](40,10)\def\stackalignment{c}
+\begin{pspicture}[showgrid=false](30,10)\def\stackalignment{c}
 	\psset{pswarning}
 	%\psset{useNA=false}
 	\pnode(11,7){BS2}
@@ -47,8 +47,8 @@
 	\mirror[compname=NM0,mirrortype=extended](Laser)(MILas)(BS1){Mirror}	
 	\optbox[startbox,optboxwidth=1.5,optboxheight=0.9,labeloffset=0](Laser)(Laser){\Centerstack{Laser \\ 3.39µm}}
 
-			\lens[n=2,compname=NL1,position=0.25,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](MILas)(BS1){\Centerstack{AS \\ 11mm}}	
-\lens[n=2,compname=NL2,position=0.65,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](MILas)(BS1){\Centerstack{PC \\ 150mm}}	
+			\lens[n=1.8,compname=NL1,position=0.25,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](MILas)(BS1){\Centerstack{AS \\ 11mm}}	
+\lens[n=1.5,compname=NL2,position=0.65,labeloffset=1,labelangle=180,fillstyle=solid,fillcolor=blue!30!white](MILas)(BS1){\Centerstack{PC \\ 150mm}}	
 
 %%% The actual Michelson
 
@@ -66,7 +66,7 @@
 
 	\mirror[compname=NM2,mirrortype=extended](BS4)(M2)(BS4){\Centerstack{Mirror\\ 2}}	
 
-	\optsource[compname=SRC2,sourcesize=0 0,innerlabel,beamdiv=10,beamangle=0](2.85,7)(2.95,7){}
+	\optsource[compname=DBC,sourcesize=2 1, position=.44 ,innerlabel,beamdiv=10,beamangle=0](FocLens)(FocLens2){DBC}
 
 	\mirror[compname=NM3,mirrortype=piezo,labeloffset=1](BS4)(M3)(BS4){\Centerstack{Delay Line\\ Mirror 3}}	
 	\mirror[compname=NM4,mirrortype=piezo,labeloffset=1.4](BS3)(M4)(BS3){\Centerstack{Delay Line\\ Mirror 4}}	
@@ -76,22 +76,33 @@
 
 
 \lens[n=1.5,compname=NL3,position=0.9,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](BS5)(FocLens){\Centerstack{AC \\ 50mm}}	
+
+%\lens[n=1.5,compname=DBC, position=.5,lensradius=2,thicklens,lenswidth=1](FocLens)(FocLens2)
+
 \lens[n=1.5,compname=NL4,position=1,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](FocLens)(FocLens2){\Centerstack{AC \\ 50mm}}	
-\lens[n=1.5,compname=NL5,position=1,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](FocLens)(ZoomLens){\Centerstack{AC \\ 50mm}}	
+\lens[n=2.5,compname=NL5,position=1,labeloffset=1,labelangle=0,fillstyle=solid,fillcolor=blue!30!white](FocLens)(ZoomLens){\Centerstack{AC \\ 50mm}}	
 
 \optbox[endbox,compname=NCAM,optboxwidth=1.5,optboxheight=0.9,labeloffset=0](ZoomLens)(CAM){\Centerstack{IR \\Camera}}
+
+
+	\optsource[compname=LL,sourcesize=0 0, position=0 ,innerlabel,beamdiv=1,beamangle=0](Laser)(M1){}
 
 \end{optexp}
 
 \addtopsstyle{Beam}{beamwidth=0.01, fillstyle=solid, linecolor = green, fillcolor=green, opacity = 0.2}
 
-\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS4}{NM3}{NBS4}{NBS5}{NL3}{NL4}{NL5}{NCAM}
-\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS4}{NM2}{NBS4}{NBS5}{NL3}{NL4}{NL5}{NCAM}
-\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS3}{NM4}{NBS3}{NBS5}{NL3}{NL4}{NL5}{NCAM}
-\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS3}{NM1}{NBS3}{NBS5}{NL3}{NL4}{NL5}{NCAM}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS4}{NM3}{NBS4}{NBS5}{NL3}{DBC}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS4}{NM2}{NBS4}{NBS5}{NL3}{DBC}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS3}{NM4}{NBS3}{NBS5}{NL3}{DBC}
+\drawwidebeam{SRC}{NPH0}{NL0}{NF0}{NBS1}{NBS2}{NBS3}{NM1}{NBS3}{NBS5}{NL3}{DBC}
 
+\drawwidebeam{DBC}{NL4}{NL5}{NCAM}
+\drawwidebeam{DBC}{NL4}{NL5}{NCAM}
+\drawwidebeam{DBC}{NL4}{NL5}{NCAM}
+\drawwidebeam{DBC}{NL4}{NL5}{NCAM}
 
-
+\addtopsstyle{Beam}{beamwidth=0.1, fillstyle=solid, linecolor = green, fillcolor=green, opacity = 0.2}
+\drawwidebeam{LL}{NM0}{NL1}{NL2}{NBS1}{NBS2}
 
 \end{pspicture}
 

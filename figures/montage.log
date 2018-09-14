@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2018.9.13)  14 SEP 2018 00:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2018.9.13)  14 SEP 2018 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,10 +1081,10 @@ Missing character: There is no µ in font cmr10!
 Here is how much of TeX's memory you used:
  35549 strings out of 494806
  797621 string characters out of 6178026
- 1246428 words of memory out of 5000000
+ 1274629 words of memory out of 5000000
  38439 multiletter control sequences out of 15000+600000
  530272 words of font info for 22 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 60i,6n,85p,10465b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,85p,10465b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on montage.dvi (1 page, 260972 bytes).
+Output written on montage.dvi (1 page, 287280 bytes).
