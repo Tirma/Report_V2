@@ -235,7 +235,8 @@ de résolution angulaire
     \subsection{characterization setup and method}
     \input{chapters/carac.tex}
     \subsection{Retrieving the visibility function}
-
+    \input{chapters/retriev_expe.tex}
+    
 \section*{Conclusion and Further-work}
 
 \backmatter
@@ -243,9 +244,27 @@ de résolution angulaire
 \section{Appendix}
     \subsection{The condition number}\label{an:cond}
     \input{chapters/condition.tex}
-
-\printglossary
+\newpage
+    \subsection{Simulated retrieved Phase and visibility}\label{an:retriev}
+    In order to compare the results of Fig.\ref{fig:retrieve_visi_expe} in a more readable way than with Fig.\ref{fig:retrieved_fan} the reader can see the results on the following plot.
+    \begin{figure}[htbp!]
+     \centering
+     \includegraphics[scale=.4]{../picture/retrieve_visi_simu.pdf}
+     \caption{The simulated retrieved visibilities of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_visi_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.}
+     \label{an:retrieved_visi_simu}
+    \end{figure}
     
+    \begin{figure}[htbp!]
+     \centering
+     \includegraphics[scale=.4]{../picture/retrieve_phase_simu.pdf}
+     \caption{The simulated retrieved phases of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_phase_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.}
+     \label{an:retrieved_phase_simu}
+    \end{figure}
+
+\newpage
+\printglossary
+
+\newpage
 \bibliographystyle{alpha}
 \bibliography{biblio}
 

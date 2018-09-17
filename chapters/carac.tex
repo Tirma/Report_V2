@@ -19,7 +19,7 @@ The DBC used for the characterization is not the one designed in the previous ch
 
 A second point to explain is the presence of the laser. As the Delay-lines were not very accurate in their mouvement, the laser was here to calibrate the OPD. Using the fringe spacing of the laser's interferogram, one can reconstruct the real OPD introduced by the delay-line. In order to do so in a First experiment the laser was coupled into the DBC together with the supercontinum source (at 3.8 \si{\micro\meter}). As it appeared that the laser signal was not enough distinguishable from the source signal this technique was not used to obtain the results presented in the following paragraph.  Rather than doing that, as the "apparent wavelength" of the high-frequency component of the interferogram has been demonstrated to be quite the same for all output at 70nm bandwidth, one interferogram was used to calibrate the OPD stating that the fringe spacing was 3.745\si{\micro\meter}. 
 
-This method is valid in the limit of "apparent frequency" not too different from one output to the other. In fact this was verified as for BL-1/2 the apparent wavelength was $3.75\pm0.05\si{\micro\meter}$, $3.73\pm0.04\si{\micro\meter}$ for BL-1/3, $3.69\pm0.08\si{\micro\meter}$ for BL-1/4, $3.72\pm0.04\si{\micro\meter}$ for BL-2/3, $3.74\pm0.05\si{\micro\meter}$ for BL-2/4 and $3.69\pm0.08\si{\micro\meter}$ for BL-3/4. This is of the same order of magnitude than what was seen in simulation. 
+This method is valid in the limit of "apparent frequency" not too different from one output to the other. In fact this was verified as for BL-1/2 the apparent wavelength was $3.73\pm0.05\si{\micro\meter}$, $3.73\pm0.04\si{\micro\meter}$ for BL-1/3, $3.70\pm0.08\si{\micro\meter}$ for BL-1/4, $3.78\pm0.04\si{\micro\meter}$ for BL-2/3, $3.75\pm0.05\si{\micro\meter}$ for BL-2/4 and $3.69\pm0.07\si{\micro\meter}$ for BL-3/4. This is of the same order of magnitude than what was seen in simulation. 
 
 In order to characterize the V2PM, the following measurements are performed for each of the 6 baselines (recording frequency = 100Hz, delay line velocity = 0.08 mm/s):
 \begin{enumerate}
@@ -28,5 +28,28 @@ In order to characterize the V2PM, the following measurements are performed for 
  \item Record the interferogram (with the 2 beams) $I$
 \end{enumerate}
 
-The obtained result is in the form of a cube of frames. In these frames 1 pixel is chosen to be approximately centered on each output in order to be influenced as little as possible by the surroundings waveguides (as explained in the first chapter. This pixel with the magnification system of 8 should be an area of less than $4\times 4 \si{\micro\meter}$ which was too large in simulation but the best doable at 3.8 µm. - In the case of the component with fanout, one would have to integral all the flux by taking an area around the output in order to have high SNR - . Then the data is processed to build the V2PM as follows :
+The obtained result is in the form of a cube of frames. In these frames 1 pixel is chosen to be approximately centered on each output in order to be influenced as little as possible by the surroundings waveguides (as explained in the first chapter. This pixel with the magnification system of 8 should be an area of less than $4\times 4 \si{\micro\meter}$ which was too large in simulation but the best doable at with the setup. - In the case of the component with fanout, one would have to integral all the flux by taking an area around the output in order to have high SNR - . Then the data is processed to build the V2PM as follows :
+\begin{enumerate}
+ \item The noise is filtered in Fourier's space.
+ \item The OPD is calculated using a chosen interferogram stating that the fringe spacing which should be 3.745µm.
+ \item $I_{DL}$ and $I_{Fix}$ are subtracted from the interferogram.
+ \item The protocorrection is applied (Eq \ref{eq:photocorpoly})
+ \item The envelop of the signal is fitted and the instrumental visibility deduced by it's amplitude
+ \item A cosine is fitted to 3 fringes of the interferogram centered at the position of it's maximum to deduce the phase (being $2\pi x/\lambda_0$, $\lambda_0 = 3.745\si{\micro\meter} in our case$)
+ \item the transmission coefficients of the input ($\kappa_{io}$ for input i to output o) are calculated from the photometric data (averaged along the number of frames) by $\kappa_{io} = \frac{I_D(o)}{\sum_{all\_pixels}{I_D(pixel)}}$
+ \item The whole V2PM is calculated as in the case of monochromatic light
+\end{enumerate}
+
+The condition number of the V2PM resulting with the tested component (numbered 39.7) is 26. The instrumental visibilities for the majority range between 0.6 and 1 which is comparable to the results obtained in simulation. An histogram of the visibilities is shown in Fig.\ref{fig:hist}. 
+
+\begin{figure}[htbp!]
+ \centering
+ \includegraphics[scale=.5]{../picture/hist.pdf}
+ \caption{Histogram of the instrumental visibilities of the ZigZag DBC number 39.7}
+ \label{fig:hist}
+\end{figure}
+
+
+From that V2PM the visibilities and phases of each baselines are retrieved first using directly the data used to calibrate the V2PM, then using data recorded after with 2 or 4 beams in input. The results are presented in the next section. 
+
 

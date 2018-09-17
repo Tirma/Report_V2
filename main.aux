@@ -14,8 +14,8 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand*\HyPL@Entry[1]{}
-\HyPL@Entry{0<</S/D>>}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand\@newglossary[4]{}
 \@newglossary{main}{glg}{gls}{glo}
 \providecommand\@glsorder[1]{}
@@ -23,15 +23,12 @@
 \@istfilename{main.ist}
 \@glsorder{word}
 \babel@aux{english}{}
-\HyPL@Entry{1<</S/D>>}
-\HyPL@Entry{2<</S/r>>}
 \@writefile{toc}{\contentsline {section}{List of Figures}{iii}{section*.3}}
-\@writefile{toc}{\contentsline {section}{List of Tables}{iv}{section*.4}}
+\@writefile{toc}{\contentsline {section}{List of Tables}{v}{section*.4}}
 \citation{minardi1}
-\HyPL@Entry{7<</S/D>>}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Motivation and scientific background}{1}{section.1}}
 \@writefile{tdo}{\contentsline {todo}{- quoi qu’est-ce l’interferometrie, intérêt par rapport à l’observation par un télescope mono-pupille en terme de résolution angulaire - nulling, contraintes - schema hi-5, explications - VLTI - bandes d’observation - unités astro - Bases de la BeamPropMethod}{1}{section*.5}}
-\pgfsyspdfmark {pgfid1}{14847445}{26416767}
+\pgfsyspdfmark {pgfid1}{19583731}{21680481}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Simulation of the DBC}{1}{section.2}}
 \citation{tatulli}
 \citation{tatulli,saviauk,Diener2017}
@@ -108,22 +105,43 @@
 \newlabel{eq:poly}{{7}{16}{Mathematical formalism}{equation.2.7}{}}
 \newlabel{eq:poly2}{{8}{17}{Mathematical formalism}{equation.2.8}{}}
 \newlabel{eq:poly3}{{9}{17}{Mathematical formalism}{equation.2.9}{}}
+\newlabel{eq:photocorpoly}{{10}{17}{Mathematical formalism}{equation.2.10}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Influence of the bandwidth on the V2PM}{17}{subsubsection.2.2.2}}
 \citation{saviauk}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Retrieving the visibility function}{18}{subsubsection.2.2.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Condition number of the V2PM for different bandwidth using the component with and without fan-out. Both DBC part have the same dimensions.\relax }}{19}{figure.caption.32}}
 \newlabel{fig:cond_nofan}{{13}{19}{Condition number of the V2PM for different bandwidth using the component with and without fan-out. Both DBC part have the same dimensions.\relax }{figure.caption.32}{}}
-\newlabel{eq:deviation}{{10}{19}{Retrieving the visibility function}{equation.2.10}{}}
+\newlabel{eq:deviation}{{11}{19}{Retrieving the visibility function}{equation.2.11}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Deviation of the retrieved phases and visibilities to the expected ones for the component without fan-out. The deviation is calculated by Eq. \ref  {eq:deviation}\relax }}{20}{figure.caption.33}}
 \newlabel{fig:retrieved_nofan}{{14}{20}{Deviation of the retrieved phases and visibilities to the expected ones for the component without fan-out. The deviation is calculated by Eq. \ref {eq:deviation}\relax }{figure.caption.33}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Laboratory characterization of the DBC}{20}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}characterization setup and method}{20}{subsection.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Deviation of the retrieved phases and visibilities to the expected ones for the component with fan-out. The deviation is calculated by Eq. \ref  {eq:deviation}. The blue dashed line is the limit of 5\% error.\relax }}{21}{figure.caption.34}}
-\newlabel{fig:retrieved_fan}{{15}{21}{Deviation of the retrieved phases and visibilities to the expected ones for the component with fan-out. The deviation is calculated by Eq. \ref {eq:deviation}. The blue dashed line is the limit of 5\% error.\relax }{figure.caption.34}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Retrieving the visibility function}{21}{subsection.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix}{22}{appendix.A}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}The condition number}{22}{subsection.A.1}}
-\newlabel{an:cond}{{A.1}{22}{The condition number}{subsection.A.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Deviation of the retrieved phases and visibilities to the expected ones for the component with fan-out. The deviation is calculated by Eq. \ref  {eq:deviation}. The blue dashed line is the limit of 5\% error. Inputs 1,2,3,4 refers respectively to WG 19,14,10,5 in Fig.\ref  {tikz:ZigZagCrossSection} as seen from the inputs.\relax }}{21}{figure.caption.34}}
+\newlabel{fig:retrieved_fan}{{15}{21}{Deviation of the retrieved phases and visibilities to the expected ones for the component with fan-out. The deviation is calculated by Eq. \ref {eq:deviation}. The blue dashed line is the limit of 5\% error. Inputs 1,2,3,4 refers respectively to WG 19,14,10,5 in Fig.\ref {tikz:ZigZagCrossSection} as seen from the inputs.\relax }{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Experimental setup for characterization of the ZigZag DBC integrated optics chip. The last two lens are used to magnify approximately 8 times. AC = Achromatic, AS = Asphere, PH = PinHole, APH = Adjustable PinHole, BS = Beam-Splitter, PC = Plano-Convex.\relax }}{21}{figure.caption.35}}
+\newlabel{fig:expersetup}{{16}{21}{Experimental setup for characterization of the ZigZag DBC integrated optics chip. The last two lens are used to magnify approximately 8 times. AC = Achromatic, AS = Asphere, PH = PinHole, APH = Adjustable PinHole, BS = Beam-Splitter, PC = Plano-Convex.\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces The photometric signal of the DBC. As can be seen the signal from input 4 ans 1 are not symmetrical certainly due to birefringence.\relax }}{22}{figure.caption.36}}
+\newlabel{fig:photometries}{{17}{22}{The photometric signal of the DBC. As can be seen the signal from input 4 ans 1 are not symmetrical certainly due to birefringence.\relax }{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Retrieving the visibility function}{23}{subsection.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Histogram of the instrumental visibilities of the ZigZag DBC number 39.7\relax }}{24}{figure.caption.37}}
+\newlabel{fig:hist}{{18}{24}{Histogram of the instrumental visibilities of the ZigZag DBC number 39.7\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Experimentally retrieved visibility from the dataset used to calibrate the V2PM. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. The inset is a zoom of the 50µm opd around the maximum. \relax }}{25}{figure.caption.38}}
+\newlabel{fig:retrieved_visi_expe}{{19}{25}{Experimentally retrieved visibility from the dataset used to calibrate the V2PM. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. The inset is a zoom of the 50µm opd around the maximum. \relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Experimentally retrieved visibility from the data recorded after the V2PM calibration. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. The inset is a zoom of the 50µm opd around the maximum. \relax }}{25}{figure.caption.39}}
+\newlabel{fig:retrieved_visi_expe2}{{20}{25}{Experimentally retrieved visibility from the data recorded after the V2PM calibration. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. The inset is a zoom of the 50µm opd around the maximum. \relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Experimentally retrieved phase from the dataset used to calibrate the V2PM. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. \relax }}{26}{figure.caption.40}}
+\newlabel{fig:retrieved_phase_expe}{{21}{26}{Experimentally retrieved phase from the dataset used to calibrate the V2PM. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. \relax }{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Experimentally retrieved phase from the data recorded after the V2PM calibration. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. \relax }}{26}{figure.caption.41}}
+\newlabel{fig:retrieved_phase_expe2}{{22}{26}{Experimentally retrieved phase from the data recorded after the V2PM calibration. Baselines numbering 1, 2, 3, 4 refers to the input waveguides (respectively 9, 14, 10 and 19). The blue line is the actual retrieved data and the orange line the theoretical result. \relax }{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix}{27}{appendix.A}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}The condition number}{27}{subsection.A.1}}
+\newlabel{an:cond}{{A.1}{27}{The condition number}{subsection.A.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Simulated retrieved Phase and visibility}{28}{subsection.A.2}}
+\newlabel{an:retriev}{{A.2}{28}{Simulated retrieved Phase and visibility}{subsection.A.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces The simulated retrieved visibilities of the optimised component at $\lambda =3.4\si {\micro \meter }$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref  {fig:retrieved_visi_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.\relax }}{28}{figure.caption.43}}
+\newlabel{an:retrieved_visi_simu}{{23}{28}{The simulated retrieved visibilities of the optimised component at $\lambda =3.4\si {\micro \meter }$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref {fig:retrieved_visi_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces The simulated retrieved phases of the optimised component at $\lambda =3.4\si {\micro \meter }$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref  {fig:retrieved_phase_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.\relax }}{29}{figure.caption.44}}
+\newlabel{an:retrieved_phase_simu}{{24}{29}{The simulated retrieved phases of the optimised component at $\lambda =3.4\si {\micro \meter }$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref {fig:retrieved_phase_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.\relax }{figure.caption.44}{}}
 \bibstyle{alpha}
 \bibdata{biblio}
 \bibcite{saleh_teich}{{BEAS07}{}{{}}{{}}}
@@ -134,4 +152,4 @@
 \bibcite{saviauk}{{SMD{$^{+}$}13}{}{{}}{{}}}
 \bibcite{tatulli}{{TMC{$^{+}$}07}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{toc}{\contentsline {section}{Bibliography}{23}{section*.38}}
+\@writefile{toc}{\contentsline {section}{Bibliography}{30}{section*.47}}

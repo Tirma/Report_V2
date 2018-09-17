@@ -1,6 +1,6 @@
 \babel@toc {english}{}
 \contentsline {section}{List of Figures}{iii}{section*.3}
-\contentsline {section}{List of Tables}{iv}{section*.4}
+\contentsline {section}{List of Tables}{v}{section*.4}
 \contentsline {section}{\numberline {1}Motivation and scientific background}{1}{section.1}
 \contentsline {section}{\numberline {2}Simulation of the DBC}{1}{section.2}
 \contentsline {subsection}{\numberline {2.1}Monochromatic light}{2}{subsection.2.1}
@@ -22,7 +22,8 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Retrieving the visibility function}{18}{subsubsection.2.2.3}
 \contentsline {section}{\numberline {3}Laboratory characterization of the DBC}{20}{section.3}
 \contentsline {subsection}{\numberline {3.1}characterization setup and method}{20}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Retrieving the visibility function}{21}{subsection.3.2}
-\contentsline {section}{\numberline {A}Appendix}{22}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}The condition number}{22}{subsection.A.1}
-\contentsline {section}{Bibliography}{23}{section*.38}
+\contentsline {subsection}{\numberline {3.2}Retrieving the visibility function}{23}{subsection.3.2}
+\contentsline {section}{\numberline {A}Appendix}{27}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}The condition number}{27}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Simulated retrieved Phase and visibility}{28}{subsection.A.2}
+\contentsline {section}{Bibliography}{30}{section*.47}
