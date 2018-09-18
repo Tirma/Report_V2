@@ -14,7 +14,9 @@
 \BOOKMARK [1][-]{section.3}{Laboratory characterization of the DBC}{}% 14
 \BOOKMARK [2][-]{subsection.3.1}{characterization setup and method}{section.3}% 15
 \BOOKMARK [2][-]{subsection.3.2}{Retrieving the visibility function}{section.3}% 16
-\BOOKMARK [1][-]{appendix.A}{Appendix}{}% 17
-\BOOKMARK [2][-]{subsection.A.1}{The condition number}{appendix.A}% 18
-\BOOKMARK [2][-]{subsection.A.2}{Simulated retrieved Phase and visibility}{appendix.A}% 19
-\BOOKMARK [1][-]{section*.47}{Bibliography}{}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Using two beams at a time}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Combining the 4 beams}{subsection.3.2}% 18
+\BOOKMARK [1][-]{appendix.A}{Appendix}{}% 19
+\BOOKMARK [2][-]{subsection.A.1}{The condition number}{appendix.A}% 20
+\BOOKMARK [2][-]{subsection.A.2}{Simulated retrieved Phase and visibility}{appendix.A}% 21
+\BOOKMARK [1][-]{section*.49}{Bibliography}{}% 22

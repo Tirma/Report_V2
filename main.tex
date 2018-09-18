@@ -165,7 +165,6 @@ Universität zu Köln}\\[5 cm]	% University Name
    abstract-text
 \end{abstract}
 \renewcommand{\abstractname}{Résumé}
-\newpage
 \begin{abstract}
    Résumé ici
 \end{abstract}
@@ -189,12 +188,7 @@ Universität zu Köln}\\[5 cm]	% University Name
 
 \todo[inline]{- quoi qu’est-ce l’interferometrie, intérêt par rapport à l’observation par un télescope mono-pupille en terme
 de résolution angulaire
-- nulling, contraintes
-- schema hi-5, explications
-- VLTI
-- bandes d’observation
-- unités astro
-- Bases de la BeamPropMethod}
+- Theoreme de VCZ}
 
 \section{Simulation of the DBC}
     
@@ -235,6 +229,7 @@ de résolution angulaire
     \subsection{characterization setup and method}
     \input{chapters/carac.tex}
     \subsection{Retrieving the visibility function}
+    
     \input{chapters/retriev_expe.tex}
     
 \section*{Conclusion and Further-work}
@@ -257,7 +252,7 @@ de résolution angulaire
     \begin{figure}[htbp!]
      \centering
      \includegraphics[scale=.4]{../picture/retrieve_phase_simu.pdf}
-     \caption{The simulated retrieved phases of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_phase_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.}
+     \caption{The simulated retrieved phases of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the phase in rad. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_phase_expe}.The blue line is the actual retrieved data the orange line the theoretical result and the green line the residues (difference between the blue and orange one). $\sigma$ is the standard deviation to 0 of the residues in rad.}
      \label{an:retrieved_phase_simu}
     \end{figure}
 
