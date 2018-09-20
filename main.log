@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2018.9.13)  18 SEP 2018 19:48
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2018.9.13)  20 SEP 2018 19:20
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.137 seconds
+luaotfload | main : initialization completed in 0.145 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1792,7 +1792,13 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 105.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (./main.tdo)
+) (./main.tdo
+Overfull \hbox (20.47115pt too wide) in paragraph at lines 1--1
+ [][] [][]\T1/lmr/m/n/10.95 - quoi qu’est-ce l’in-ter-fer-ome-trie, in-tér
+êt par rap-port à l’ob-ser-va-tion par un téle-scope mono-pupille 
+ []
+
+)
 \tf@tdo=\write7
 
 \openout7 = main.tdo
@@ -1821,12 +1827,12 @@ Missing character: There is no ’ (U+2019) in font ec-lmr10!
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 ]
-<images/phelma.png, id=108, 281.05pt x 180.675pt>
+<images/phelma.png, id=124, 281.05pt x 180.675pt>
 File: images/phelma.png Graphic file (type png)
 <use images/phelma.png>
 Package luatex.def Info: images/phelma.png  used on input line 115.
 (luatex.def)             Requested size: 168.63129pt x 108.40582pt.
-<images/university.png, id=109, 180.675pt x 127.47626pt>
+<images/university.png, id=125, 180.675pt x 127.47626pt>
 File: images/university.png Graphic file (type png)
 <use images/university.png>
 Package luatex.def Info: images/university.png  used on input line 123.
@@ -1853,88 +1859,64 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 \openout8 = main.toc
  (./main.lof
-Overfull \hbox (29.7291pt too wide) in paragraph at lines 5--5
+Overfull \hbox (1.27634pt too wide) in paragraph at lines 6--6
  [][] [][][]\T1/lmr/m/n/10.95 In-flu-ence of dif-fer-ent pa-ram-e-ters on the p
 hases and am-pli-tudes of the in-ter-fer-o-gram 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 12.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 13.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (8.43939pt too wide) in paragraph at lines 12--12
- [][] [][][]\T1/lmr/m/n/10.95 Base-line 1-2 Vis-i-bil-i-ties (pho-tom-e-try cor
--rected) and phases re-la-tions (re-fer-ring 
- []
-
-
-Overfull \hbox (4.39066pt too wide) in paragraph at lines 13--13
- [][] [][][]\T1/lmr/m/n/10.95 Con-di-tion num-ber of monochro-matic V2PM ma-tri
--ces at dif-fer-ent wave-length. 
- []
-
-
-Overfull \hbox (1.62256pt too wide) in paragraph at lines 14--14
- [][] [][][]\T1/lmr/m/n/10.95 Con-di-tion num-ber of the V2PM for dif-fer-ent b
-and-width us-ing the com-po-nent 
- []
-
-
-Overfull \hbox (0.83336pt too wide) in paragraph at lines 17--17
- [][] [][][]\T1/lmr/m/n/10.95 Ex-per-i-men-tal setup for char-ac-ter-i-za-tion 
-of the ZigZag DBC in-te-grated op-tics 
- []
-
-
-Overfull \hbox (21.64018pt too wide) in paragraph at lines 20--20
- \T1/lmr/m/n/10.95 V2PM. Base-lines num-ber-ing 1, 2, 3, 4 refers to the in-put
- waveg-uides (re-spec-tively 
- []
-
-
-Overfull \hbox (2.56963pt too wide) in paragraph at lines 22--22
- [][] [][][]\T1/lmr/m/n/10.95 Ex-per-i-men-tally re-trieved phase from the data
-set used to cal-i-brate the V2PM. 
- []
-
-
-Underfull \vbox (badness 2012) has occurred while \output is active []
-
- [3])
-\tf@lof=\write9
-
-\openout9 = main.lof
-
-(./main.lot
-Overfull \hbox (12.25601pt too wide) in paragraph at lines 3--3
- [][] [][][]\T1/lmr/m/n/10.95 Con-di-tion num-ber and through-put (in paren-the
--sis) over the WG's cross-section 
+Overfull \hbox (16.66869pt too wide) in paragraph at lines 22--22
+ [][] [][][]\T1/lmr/m/n/10.95 Ex-per-i-men-tally re-trieved vis-i-bil-ity from 
+the data recorded af-ter the V2PM cal-i-bra-tion. 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Overfull \hbox (2.37238pt too wide) in paragraph at lines 24--24
+ [][] [][][]\T1/lmr/m/n/10.95 Ex-per-i-men-tally re-trieved phase from the data
+ recorded af-ter the V2PM cal-i-bra-tion. 
+ []
+
+
+Overfull \hbox (16.66869pt too wide) in paragraph at lines 25--25
+ [][] [][][]\T1/lmr/m/n/10.95 Ex-per-i-men-tally re-trieved vis-i-bil-ity from 
+the data recorded af-ter the V2PM cal-i-bra-tion. 
+ []
+
+
+Overfull \hbox (2.37238pt too wide) in paragraph at lines 26--26
+ [][] [][][]\T1/lmr/m/n/10.95 Ex-per-i-men-tally re-trieved phase from the data
+ recorded af-ter the V2PM cal-i-bra-tion. 
+ []
+
+)
+\tf@lof=\write9
+
+\openout9 = main.lof
+ (./main.lot
+Underfull \vbox (badness 2035) has occurred while \output is active []
 
  [4])
 \tf@lot=\write10
 
 \openout10 = main.lot
 
-[5] (./intro.tex
-Overfull \hbox (1.84552pt too wide) in paragraph at lines 5--6
-\T1/lmr/m/n/10 called []dis-crete beam com-biner (DBC). Al-low-ing to re-trieve
- the as-tro-nom-i-cal pa-ram-e-ters
- []
-
-)
-Overfull \hbox (6.01213pt too wide) in paragraph at lines 7--184
-\T1/lmr/m/n/10 ex-per-i-men-tal char-ac-ter-i-sa-tion of the []DBC and its ac-c
-u-racy in re-triev-ing the as-tro-nom-i-cal
- []
-
+[5] (./intro.tex)
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
 ne 191.
-(./figures/DBC_fig.tex)
+
+Underfull \hbox (badness 1205) in paragraph at lines 191--191
+[][][][]\T1/lmr/m/n/10.95 - quoi qu’est-ce l’in-ter-fer-ome-trie, in-tér
+êt par rap-port à l’ob-ser-va-tion par un téle-scope 
+ []
+
+(./chapters/motivation.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
@@ -1942,169 +1924,174 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
-] (./chapters/simu/math_mono.tex [2]
-Overfull \hbox (3.91127pt too wide) in paragraph at lines 50--54
-\T1/lmr/m/n/10.95 no-ta-tion in-tro-duced in [[]], $[] \OT1/lmr/m/n/10.95 = ( [
-]\OML/lmm/m/it/10.95 ; :::; \OT1/lmr/m/n/10.95  []\OML/lmm/m/it/10.95 ; \OMS/lm
-sy/m/n/10.95 R\OT1/lmr/m/n/10.95  []\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 I
-\OT1/lmr/m/n/10.95  []\OML/lmm/m/it/10.95 ; :::; \OMS/lmsy/m/n/10.95 R\OT1/lmr/
-m/n/10.95  []\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 I\OT1/lmr/m/n/10.95  [])
-$
+]
+Overfull \hbox (24.02876pt too wide) in paragraph at lines 23--24
+[]\T1/lmr/m/n/10.95 The source spec-tral band-width is much smaller than its av
+-er-age fre-quency (quasi-monochromatic
  []
 
-) (./chapters/simu/evan.tex [3]
-<picture/integrating_area/3gauss.png, id=414, 374.39874pt x 252.945pt>
+<images/../images/scheme.png, id=401, 740.7675pt x 758.835pt>
+File: images/../images/scheme.png Graphic file (type png)
+<use images/../images/scheme.png>
+Package luatex.def Info: images/../images/scheme.png  used on input line 28.
+(luatex.def)             Requested size: 222.23196pt x 227.65225pt.
+) [2<./images/../images/scheme.png>] (./figures/DBC_fig.tex)
+(./chapters/simu/math_mono.tex [3] [4]) (./chapters/simu/evan.tex
+<picture/integrating_area/3gauss.png, id=447, 374.39874pt x 252.945pt>
 File: picture/integrating_area/3gauss.png Graphic file (type png)
 <use picture/integrating_area/3gauss.png>
 Package luatex.def Info: picture/integrating_area/3gauss.png  used on input line
  27.
 (luatex.def)             Requested size: 187.19891pt x 126.47218pt.
- [4<./picture/integrating_area/3gauss.png>]
-<picture/integrating_area/phase_python1.png, id=425, 390.45876pt x 266.9975pt>
+ [5] [6<./picture/integrating_area/3gauss.png>]
+<picture/integrating_area/phase_python1.png, id=468, 390.45876pt x 266.9975pt>
 File: picture/integrating_area/phase_python1.png Graphic file (type png)
 <use picture/integrating_area/phase_python1.png>
 Package luatex.def Info: picture/integrating_area/phase_python1.png  used on inp
 ut line 89.
 (luatex.def)             Requested size: 136.6626pt x 93.45052pt.
-<picture/integrating_area/phase_python2.png, id=426, 396.48125pt x 266.9975pt>
+
+Underfull \hbox (badness 3746) in paragraph at lines 90--90
+[]\T1/lmr/m/n/10 (a) |Sim-u-la-tion with the same
+ []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 90--90
+\T1/lmr/m/n/10 power in the mid-dle and the
+ []
+
+<picture/integrating_area/phase_python2.png, id=469, 396.48125pt x 266.9975pt>
 File: picture/integrating_area/phase_python2.png Graphic file (type png)
 <use picture/integrating_area/phase_python2.png>
 Package luatex.def Info: picture/integrating_area/phase_python2.png  used on inp
 ut line 94.
 (luatex.def)             Requested size: 138.77051pt x 93.45052pt.
-<picture/integrating_area/phase_python3.png, id=427, 396.48125pt x 266.9975pt>
+<picture/integrating_area/phase_python3.png, id=470, 396.48125pt x 266.9975pt>
 File: picture/integrating_area/phase_python3.png Graphic file (type png)
 <use picture/integrating_area/phase_python3.png>
 Package luatex.def Info: picture/integrating_area/phase_python3.png  used on inp
 ut line 100.
 (luatex.def)             Requested size: 138.77051pt x 93.45052pt.
+) (./chapters/simu/geom.tex
+Underfull \vbox (badness 1024) has occurred while \output is active []
 
-[5]) (./chapters/simu/geom.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6<./picture/integrating_area/phase_python1.png><./picture/integrating_area/pha
+ [7<./picture/integrating_area/phase_python1.png><./picture/integrating_area/pha
 se_python2.png><./picture/integrating_area/phase_python3.png>]
-<images/../picture/phase_100.pdf, id=448, 462.52798pt x 347.61871pt>
+<images/../picture/phase_100.pdf, id=481, 462.52798pt x 347.61871pt>
 File: images/../picture/phase_100.pdf Graphic file (type pdf)
 <use images/../picture/phase_100.pdf>
 Package luatex.def Info: images/../picture/phase_100.pdf  used on input line 13.
 
 (luatex.def)             Requested size: 231.26341pt x 173.80893pt.
 
-Overfull \hbox (38.92053pt too wide) in paragraph at lines 13--14
+Overfull \hbox (26.11688pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<images/../picture/Fourier_1.pdf, id=449, 462.52798pt x 346.89601pt>
+<images/../picture/Fourier_1.pdf, id=482, 462.52798pt x 346.89601pt>
 File: images/../picture/Fourier_1.pdf Graphic file (type pdf)
 <use images/../picture/Fourier_1.pdf>
 Package luatex.def Info: images/../picture/Fourier_1.pdf  used on input line 20.
 
 (luatex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (38.92053pt too wide) in paragraph at lines 20--21
+Overfull \hbox (26.11688pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
-[7<./images/../picture/phase_100.pdf><./images/../picture/Fourier_1.pdf>]
-Overfull \hbox (66.43356pt too wide) in paragraph at lines 59--70
+[8<./images/../picture/phase_100.pdf><./images/../picture/Fourier_1.pdf>]
+Overfull \hbox (37.9808pt too wide) in paragraph at lines 59--70
  [][] 
  []
 
-<picture/geometry/throughput_px.png, id=470, 462.528pt x 346.896pt>
+<picture/geometry/throughput_px.png, id=503, 462.528pt x 346.896pt>
 File: picture/geometry/throughput_px.png Graphic file (type png)
 <use picture/geometry/throughput_px.png>
 Package luatex.def Info: picture/geometry/throughput_px.png  used on input line 
 78.
 (luatex.def)             Requested size: 185.0079pt x 138.75594pt.
-<picture/geometry/throughput_py.png, id=471, 462.528pt x 346.896pt>
+<picture/geometry/throughput_py.png, id=504, 462.528pt x 346.896pt>
 File: picture/geometry/throughput_py.png Graphic file (type png)
 <use picture/geometry/throughput_py.png>
 Package luatex.def Info: picture/geometry/throughput_py.png  used on input line 
 84.
 (luatex.def)             Requested size: 185.0079pt x 138.75594pt.
-[8<./picture/geometry/throughput_px.png><./picture/geometry/throughput_py.png>]
-<picture/geometry/throughput_dn.png, id=482, 462.528pt x 346.896pt>
+[9<./picture/geometry/throughput_px.png><./picture/geometry/throughput_py.png>]
+<picture/geometry/throughput_dn.png, id=516, 462.528pt x 346.896pt>
 File: picture/geometry/throughput_dn.png Graphic file (type png)
 <use picture/geometry/throughput_dn.png>
 Package luatex.def Info: picture/geometry/throughput_dn.png  used on input line 
 158.
 (luatex.def)             Requested size: 231.26343pt x 173.44757pt.
-[9] [10<./picture/geometry/throughput_dn.png>]
-<picture/geometry/CondNvsL.png, id=498, 462.528pt x 346.896pt>
+[10]
+<picture/geometry/CondNvsL.png, id=525, 462.528pt x 346.896pt>
 File: picture/geometry/CondNvsL.png Graphic file (type png)
 <use picture/geometry/CondNvsL.png>
 Package luatex.def Info: picture/geometry/CondNvsL.png  used on input line 189.
 (luatex.def)             Requested size: 231.26343pt x 173.44757pt.
-<picture/geometry/propagation.png, id=500, 751.80875pt x 673.51625pt>
+<picture/geometry/propagation.png, id=527, 751.80875pt x 673.51625pt>
 File: picture/geometry/propagation.png Graphic file (type png)
 <use picture/geometry/propagation.png>
 Package luatex.def Info: picture/geometry/propagation.png  used on input line 21
 9.
 (luatex.def)             Requested size: 187.95172pt x 168.37865pt.
-<picture/geometry/throughput-L.png, id=501, 578.16pt x 433.62pt>
+<picture/geometry/throughput-L.png, id=528, 578.16pt x 433.62pt>
 File: picture/geometry/throughput-L.png Graphic file (type png)
 <use picture/geometry/throughput-L.png>
 Package luatex.def Info: picture/geometry/throughput-L.png  used on input line 2
 27.
 (luatex.def)             Requested size: 202.35902pt x 151.76927pt.
 
-Overfull \hbox (10.01614pt too wide) in paragraph at lines 227--230
- [][] 
+Underfull \hbox (badness 2310) in paragraph at lines 230--230
+[]\T1/lmr/m/n/10 (b) |Through-put over the cross-section for
  []
 
-[11<./picture/geometry/CondNvsL.png>] [12<./picture/geometry/propagation.png><./
-picture/geometry/throughput-L.png>]
-<picture/geometry/phase_180_14.png, id=515, 295.5843pt x 118.5228pt>
+[11<./picture/geometry/throughput_dn.png>] [12<./picture/geometry/CondNvsL.png><
+./picture/geometry/propagation.png><./picture/geometry/throughput-L.png>]
+<picture/geometry/phase_180_14.png, id=544, 295.5843pt x 118.5228pt>
 File: picture/geometry/phase_180_14.png Graphic file (type png)
 <use picture/geometry/phase_180_14.png>
 Package luatex.def Info: picture/geometry/phase_180_14.png  used on input line 2
 81.
 (luatex.def)             Requested size: 147.79178pt x 59.26125pt.
-<picture/geometry/phase_180_14_plat.png, id=516, 296.307pt x 71.5473pt>
+<picture/geometry/phase_180_14_plat.png, id=545, 296.307pt x 71.5473pt>
 File: picture/geometry/phase_180_14_plat.png Graphic file (type png)
 <use picture/geometry/phase_180_14_plat.png>
 Package luatex.def Info: picture/geometry/phase_180_14_plat.png  used on input l
 ine 287.
 (luatex.def)             Requested size: 148.15314pt x 35.77354pt.
-<picture/geometry/visi_flat_3area.png, id=519, 462.528pt x 346.896pt>
+<picture/geometry/visi_flat_3area.png, id=548, 462.528pt x 346.896pt>
 File: picture/geometry/visi_flat_3area.png Graphic file (type png)
 <use picture/geometry/visi_flat_3area.png>
 Package luatex.def Info: picture/geometry/visi_flat_3area.png  used on input lin
 e 332.
 (luatex.def)             Requested size: 185.0079pt x 138.75594pt.
-<picture/geometry/phases_flat_3area.png, id=520, 462.528pt x 346.896pt>
+<picture/geometry/phases_flat_3area.png, id=549, 462.528pt x 346.896pt>
 File: picture/geometry/phases_flat_3area.png Graphic file (type png)
 <use picture/geometry/phases_flat_3area.png>
 Package luatex.def Info: picture/geometry/phases_flat_3area.png  used on input l
 ine 338.
 (luatex.def)             Requested size: 185.0079pt x 138.75594pt.
- [13<./picture/geometry/phase_180_14.png><./picture/geometry/phase_180_14_plat.p
-ng>]
-Overfull \hbox (3.1647pt too wide) in paragraph at lines 352--353
-\T1/lmr/m/n/10.95 ef-fects has been sim-u-lated. In this part the V2PM ma-trix 
-is cal-cu-lated us-ing monochro-matic
- []
 
+[13<./picture/geometry/phase_180_14.png><./picture/geometry/phase_180_14_plat.pn
+g>] [14<./picture/geometry/visi_flat_3area.png><./picture/geometry/phases_flat_3
+area.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 357.
 
-[14<./picture/geometry/visi_flat_3area.png><./picture/geometry/phases_flat_3area
-.png>]
-<picture/cond_BW/nofan.png, id=540, 384.6872pt x 316.93407pt>
+<picture/cond_BW/nofan.png, id=568, 384.6872pt x 316.93407pt>
 File: picture/cond_BW/nofan.png Graphic file (type png)
 <use picture/cond_BW/nofan.png>
 Package luatex.def Info: picture/cond_BW/nofan.png  used on input line 379.
 (luatex.def)             Requested size: 173.10764pt x 142.619pt.
-<picture/cond_BW/fanout.png, id=541, 384.6872pt x 316.93407pt>
+<picture/cond_BW/fanout.png, id=569, 384.6872pt x 316.93407pt>
 File: picture/cond_BW/fanout.png Graphic file (type png)
 <use picture/cond_BW/fanout.png>
 Package luatex.def Info: picture/cond_BW/fanout.png  used on input line 385.
 (luatex.def)             Requested size: 173.10764pt x 142.619pt.
- [15<./picture/cond_BW/nofan.png><./picture/cond_BW/fanout.png>])
-(./chapters/simu/math_poly.tex
-Overfull \hbox (46.76045pt too wide) detected at line 4
+[15]) (./chapters/simu/math_poly.tex
+Overfull \hbox (18.3077pt too wide) detected at line 4
 []\OML/lmm/m/it/10.95 In\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/1
 0.95 ) = [][] \OML/lmm/m/it/10.95 I[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \
 OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.
@@ -2116,52 +2103,55 @@ m/n/10.95 (\OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \OT1
 x\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 d
  []
 
-[16]
-Overfull \hbox (2.86278pt too wide) detected at line 9
-[]\OML/lmm/m/it/10.95 In\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/1
-0.95 ) = \OML/lmm/m/it/10.95 t[] [][] I[]d \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/
-10.95 t[] [][] I[]d \OT1/lmr/m/n/10.95 + 2[] [][] [] [] \OML/lmm/m/it/10.95 co
-s\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/1
-0.95 \OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95   \OT1/lmr/m/n/10.95 2\OML/lmm/m
-/it/10.95 x\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 d
+
+Underfull \vbox (badness 6125) has occurred while \output is active []
+
+ [16<./picture/cond_BW/nofan.png><./picture/cond_BW/fanout.png>]
+Overfull \hbox (17.64069pt too wide) in paragraph at lines 15--16
+[]\T1/lmr/m/n/10.95 In or-der to use the same for-mal-ism as in the monochro-ma
+tic case, we use the so called pho-to-cor-rec-tion
  []
 
 ) (./chapters/simu/bw.tex [17]
-Overfull \hbox (6.76361pt too wide) in paragraph at lines 7--8
-[]\T1/lmr/m/n/10.95 The first stud-ied thing is the im-pact of the V2PM con-di-
-tion num-ber re-gard-ing the band-width
+Overfull \hbox (27.52544pt too wide) in paragraph at lines 3--6
+[]\T1/lmr/m/n/10.95 Us-ing the Beam prop-a-ga-tion method to sim-u-late the com
+-po-nent be-hav-ior, our sim-u-lated poly-chro-matic
  []
 
-
-Overfull \hbox (1.19731pt too wide) in paragraph at lines 11--16
-\T1/lmr/m/n/10.95 com-po-nent are sim-i-lar at lower band-width but are al-most
- 2 times lower at higher band-width
- []
-
-<picture/cond_BW/cond_nofan.png, id=571, 462.528pt x 346.896pt>
+<picture/cond_BW/cond_nofan.png, id=598, 462.528pt x 346.896pt>
 File: picture/cond_BW/cond_nofan.png Graphic file (type png)
 <use picture/cond_BW/cond_nofan.png>
 Package luatex.def Info: picture/cond_BW/cond_nofan.png  used on input line 23.
 (luatex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (17.54767pt too wide) in paragraph at lines 23--24
+Overfull \hbox (3.32129pt too wide) in paragraph at lines 23--24
 [][] 
  []
 
-<picture/cond_BW/cond_fan.png, id=572, 462.528pt x 346.896pt>
+<picture/cond_BW/cond_fan.png, id=599, 462.528pt x 346.896pt>
 File: picture/cond_BW/cond_fan.png Graphic file (type png)
 <use picture/cond_BW/cond_fan.png>
 Package luatex.def Info: picture/cond_BW/cond_fan.png  used on input line 27.
 (luatex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (17.54767pt too wide) in paragraph at lines 27--28
+Overfull \hbox (3.32129pt too wide) in paragraph at lines 27--28
 [][] 
  []
 
-) (./chapters/simu/retriev_poly.tex [18
+)
+Overfull \hbox (11.22313pt too wide) in paragraph at lines 35--224
+[]\T1/lmr/m/n/10.95 How-ever the con-di-tion num-ber of the V2PM doesn't give a
+ con-clu-sive state-ment of the per-for-mances
+ []
+
+(./chapters/simu/retriev_poly.tex
+Underfull \vbox (badness 3601) has occurred while \output is active []
+
+ [18
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
-] [19<./picture/cond_BW/cond_nofan.png><./picture/cond_BW/cond_fan.png>]
-<picture/retrieval_simu/visi_retrieved_nofan.png, id=591, 462.528pt x 346.896pt>
+]
+[19<./picture/cond_BW/cond_nofan.png><./picture/cond_BW/cond_fan.png>]
+<picture/retrieval_simu/visi_retrieved_nofan.png, id=618, 462.528pt x 346.896pt>
 
 File: picture/retrieval_simu/visi_retrieved_nofan.png Graphic file (type png)
 <use picture/retrieval_simu/visi_retrieved_nofan.png>
@@ -2169,11 +2159,11 @@ Package luatex.def Info: picture/retrieval_simu/visi_retrieved_nofan.png  used o
 n input line 19.
 (luatex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (15.79279pt too wide) in paragraph at lines 19--20
+Overfull \hbox (2.98914pt too wide) in paragraph at lines 19--20
 [][] 
  []
 
-<picture/retrieval_simu/phase_retrieved_nofan.png, id=592, 462.528pt x 346.896pt
+<picture/retrieval_simu/phase_retrieved_nofan.png, id=619, 462.528pt x 346.896pt
 >
 File: picture/retrieval_simu/phase_retrieved_nofan.png Graphic file (type png)
 <use picture/retrieval_simu/phase_retrieved_nofan.png>
@@ -2181,95 +2171,66 @@ Package luatex.def Info: picture/retrieval_simu/phase_retrieved_nofan.png  used
 on input line 23.
 (luatex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (15.79279pt too wide) in paragraph at lines 23--24
+Overfull \hbox (2.98914pt too wide) in paragraph at lines 23--24
 [][] 
  []
 
-<picture/retrieval_simu/visi_retrieved_fan.png, id=596, 462.528pt x 346.896pt>
+<picture/retrieval_simu/visi_retrieved_fan.png, id=623, 462.528pt x 346.896pt>
 File: picture/retrieval_simu/visi_retrieved_fan.png Graphic file (type png)
 <use picture/retrieval_simu/visi_retrieved_fan.png>
 Package luatex.def Info: picture/retrieval_simu/visi_retrieved_fan.png  used on 
 input line 33.
 (luatex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (15.79279pt too wide) in paragraph at lines 33--34
+Overfull \hbox (2.98914pt too wide) in paragraph at lines 33--34
 [][] 
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 34--34
+Underfull \hbox (badness 7433) in paragraph at lines 34--34
 []\T1/lmr/m/n/10 (a) |Stan-dard de-vi-a-tion of the re-trieved
  []
 
-<picture/retrieval_simu/phase_retrieved_fan.png, id=597, 462.528pt x 346.896pt>
+<picture/retrieval_simu/phase_retrieved_fan.png, id=624, 462.528pt x 346.896pt>
 File: picture/retrieval_simu/phase_retrieved_fan.png Graphic file (type png)
 <use picture/retrieval_simu/phase_retrieved_fan.png>
 Package luatex.def Info: picture/retrieval_simu/phase_retrieved_fan.png  used on
  input line 37.
 (luatex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (15.79279pt too wide) in paragraph at lines 37--38
+Overfull \hbox (2.98914pt too wide) in paragraph at lines 37--38
 [][] 
  []
 
-
-Underfull \hbox (badness 1762) in paragraph at lines 38--38
-[]\T1/lmr/m/n/10 (b) |Stan-dard de-vi-a-tion of the re-trieved
- []
-
 ) (./chapters/carac.tex
-<images/../figures/montage.pdf, id=602, 853.57898pt x 284.52296pt>
+<images/../figures/montage.pdf, id=629, 853.57898pt x 284.52296pt>
 File: images/../figures/montage.pdf Graphic file (type pdf)
 <use images/../figures/montage.pdf>
 Package luatex.def Info: images/../figures/montage.pdf  used on input line 3.
 (luatex.def)             Requested size: 452.39471pt x 150.79643pt.
-
-Overfull \hbox (24.96318pt too wide) in paragraph at lines 3--4
- [][] 
- []
-
-
-Overfull \hbox (13.35583pt too wide) in paragraph at lines 8--10
-\T1/lmr/m/n/10.95 re-sults with a band-width up to 70nm. The pur-pose of this p
-art is to ver-ify that ex-per-i-men-tally.
- []
-
-[20<./picture/retrieval_simu/visi_retrieved_nofan.png><./picture/retrieval_simu/
-phase_retrieved_nofan.png>] [21<./picture/retrieval_simu/visi_retrieved_fan.png>
-<./picture/retrieval_simu/phase_retrieved_fan.png><./images/../figures/montage.p
-df>]
-<images/photometries.pdf, id=631, 979.9812pt x 289.08pt>
+ [20<./picture/retrieval_simu/visi_retrieved_nofan.png><./picture/retrieval_simu
+/phase_retrieved_nofan.png>] [21<./picture/retrieval_simu/visi_retrieved_fan.png
+><./picture/retrieval_simu/phase_retrieved_fan.png><./images/../figures/montage.
+pdf>]
+<images/photometries.pdf, id=658, 979.9812pt x 289.08pt>
 File: images/photometries.pdf Graphic file (type pdf)
 <use images/photometries.pdf>
 Package luatex.def Info: images/photometries.pdf  used on input line 15.
 (luatex.def)             Requested size: 440.98746pt x 130.0848pt.
-
-Overfull \hbox (13.55592pt too wide) in paragraph at lines 15--16
- [][] 
- []
-
-[22<./images/photometries.pdf>]
-Overfull \hbox (35.47801pt too wide) in paragraph at lines 39--40
-\T1/lmr/m/n/10.95 from the pho-to-met-ric data (av-er-aged along the num-ber of
- frames) by $\OML/lmm/m/it/10.95 [] \OT1/lmr/m/n/10.95 = []$ 
- []
-
-<images/../picture/hist.pdf, id=680, 462.52798pt x 346.89601pt>
+ [22<./images/photometries.pdf>]
+<images/../picture/hist.pdf, id=710, 462.52798pt x 346.89601pt>
 File: images/../picture/hist.pdf Graphic file (type pdf)
 <use images/../picture/hist.pdf>
 Package luatex.def Info: images/../picture/hist.pdf  used on input line 47.
 (luatex.def)             Requested size: 231.26341pt x 173.44757pt.
-) (./chapters/retriev_expe.tex
-Underfull \vbox (badness 4144) has occurred while \output is active []
-
- [23]
-<images/../picture/retrieve_visi_expe.pdf, id=702, 987.20822pt x 484.9317pt>
+) [23<./images/../picture/hist.pdf>] (./chapters/retriev_expe.tex
+<images/../picture/retrieve_visi_expe.pdf, id=768, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_visi_expe.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_visi_expe.pdf>
 Package luatex.def Info: images/../picture/retrieve_visi_expe.pdf  used on input
  line 10.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
-<images/../picture/retrieve_visi_expe2.pdf, id=703, 987.20822pt x 484.9317pt>
+<images/../picture/retrieve_visi_expe2.pdf, id=769, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_visi_expe2.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_visi_expe2.pdf>
 Package luatex.def Info: images/../picture/retrieve_visi_expe2.pdf  used on inpu
@@ -2280,121 +2241,89 @@ t line 17.
 LaTeX Warning: Reference `retrieve_phase_expe2' on page 24 undefined on input li
 ne 22.
 
-[24<./images/../picture/hist.pdf>] [25<./images/../picture/retrieve_visi_expe.pd
-f><./images/../picture/retrieve_visi_expe2.pdf>]
-<images/../picture/retrieve_phase_expe1.pdf, id=810, 987.20822pt x 484.9317pt>
+<images/../picture/retrieve_phase_expe1.pdf, id=773, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_phase_expe1.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_phase_expe1.pdf>
 Package luatex.def Info: images/../picture/retrieve_phase_expe1.pdf  used on inp
 ut line 26.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
-<images/../picture/retrieve_phase_expe2.pdf, id=811, 987.20822pt x 484.9317pt>
+<images/../picture/retrieve_phase_expe2.pdf, id=774, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_phase_expe2.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_phase_expe2.pdf>
 Package luatex.def Info: images/../picture/retrieve_phase_expe2.pdf  used on inp
 ut line 33.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26<./images/../picture/retrieve_phase_expe1.pdf>]
-<images/../picture/retrieve_visi_4BL2.pdf, id=859, 987.20822pt x 484.9317pt>
+[24] [25<./images/../picture/retrieve_visi_expe.pdf><./images/../picture/retriev
+e_visi_expe2.pdf>] [26<./images/../picture/retrieve_phase_expe1.pdf><./images/..
+/picture/retrieve_phase_expe2.pdf>]
+<images/../picture/retrieve_visi_4BL2.pdf, id=922, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_visi_4BL2.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_visi_4BL2.pdf>
 Package luatex.def Info: images/../picture/retrieve_visi_4BL2.pdf  used on input
  line 49.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
- [27<./images/../picture/retrieve_phase_expe2.pdf>]
-<images/../picture/retrieve_phase_4BL2.pdf, id=902, 987.20822pt x 484.9317pt>
+<images/../picture/retrieve_phase_4BL2.pdf, id=923, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_phase_4BL2.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_phase_4BL2.pdf>
 Package luatex.def Info: images/../picture/retrieve_phase_4BL2.pdf  used on inpu
 t line 56.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
-
-
-LaTeX Warning: Reference `Diener2017' on page 28 undefined on input line 61.
-
-)
-Overfull \hbox (19.50919pt too wide) in paragraph at lines 61--234
-[]\T1/lmr/m/n/10.95 The re-trieval of the phase and vis-i-bil-ity a source us-i
-ng the ZigZag-DBC have been demon-strated
- []
-
-[28<./images/../picture/retrieve_visi_4BL2.pdf><./images/../picture/retrieve_pha
-se_4BL2.pdf>] [29] (./chapters/condition.tex) [30
+) [27<./images/../picture/retrieve_visi_4BL2.pdf>] [28<./images/../picture/retri
+eve_phase_4BL2.pdf>]
+(./chapters/condition.tex) [29
 
 ]
-
-LaTeX Warning: Reference `fig:retrieve_visi_expe' on page 31 undefined on input 
-line 244.
-
-<images/../picture/retrieve_visi_simu.pdf, id=981, 987.20822pt x 484.9317pt>
+<images/../picture/retrieve_visi_simu.pdf, id=1005, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_visi_simu.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_visi_simu.pdf>
 Package luatex.def Info: images/../picture/retrieve_visi_simu.pdf  used on input
- line 247.
+ line 248.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
-<images/../picture/retrieve_phase_simu.pdf, id=984, 987.20822pt x 484.9317pt>
+<images/../picture/retrieve_phase_simu.pdf, id=1008, 987.20822pt x 484.9317pt>
 File: images/../picture/retrieve_phase_simu.pdf Graphic file (type pdf)
 <use images/../picture/retrieve_phase_simu.pdf>
 Package luatex.def Info: images/../picture/retrieve_phase_simu.pdf  used on inpu
-t line 254.
+t line 255.
 (luatex.def)             Requested size: 394.8763pt x 193.96924pt.
-[31<./images/../picture/retrieve_visi_simu.pdf>] (./main.gls) [32<./images/../pi
-cture/retrieve_phase_simu.pdf>] (./main.bbl
-Underfull \hbox (badness 5105) in paragraph at lines 35--40
+ [30<./images/../picture/retrieve_visi_simu.pdf>] (./main.gls) [31<./images/../p
+icture/retrieve_phase_simu.pdf>] (./main.bbl
+Underfull \hbox (badness 1742) in paragraph at lines 40--45
 []\T1/lmr/m/n/10.95 Al-lar Savi-auk, Ste-fano Mi-nardi, Fe-lix Dreisow, Ste-fan
- Nolte, and
+ Nolte, and Thomas
  []
 
-
-Underfull \hbox (badness 5064) in paragraph at lines 35--40
-\T1/lmr/m/n/10.95 Thomas Pertsch.  3d-integrated op-tics com-po-nent for as-tro
--nom-i-cal
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 42--49
-[]\T1/lmr/m/n/10.95 Eric Tat-ulli, F Mil-lour, A Chelli, Gilles Du-vert, Bram A
-cke, Os-car
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 42--49
-\T1/lmr/m/n/10.95 Y Bres-son, Michel Dugue, S Gen-nari, L Glück, and Noemi Ven
--tura.
- []
-
-) [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 266.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 266.
+) [32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 266.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 266.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7C8E5DF5097EF7EADEE922E2174C0B28;1665.
+(rerunfilecheck)             Checksum: C4C577C949AB529B37CDA843BC9C093C;2001.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 )
 
 Here is how much of LuaTeX's memory you used:
- 43734 strings out of 494480
+ 43767 strings out of 494480
  100000,1144653 words of node,token memory allocated
- 1001 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 66 attribute, 79 glue_spec, 66 attr
+ 1013 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 69 attribute, 79 glue_spec, 69 attr
 ibute_list, 1 write, 28 pdf_action nodes
-   avail lists: 1:1,2:2223,3:1410,4:168,5:363,6:3771,7:1287,8:187,9:482,10:19,11
-:360
- 45779 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:2161,3:1335,4:186,5:352,6:5756,7:1315,8:184,9:537,10:20,11
+:519
+ 45788 multiletter control sequences out of 65536+600000
  73 fonts using 9115319 bytes
  62i,19n,94p,1983b,1121s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
 /lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/tex
-mf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-math
-ex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/t
+mf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-math
+sy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/t
 ype1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/sha
@@ -2406,10 +2335,10 @@ ublic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on main.pdf (40 pages, 1509384 bytes).
+Output written on main.pdf (39 pages, 1569760 bytes).
 
-PDF statistics: 1138 PDF objects out of 1200 (max. 8388607)
- 820 compressed objects within 9 object streams
- 137 named destinations out of 1000 (max. 131072)
- 177 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1162 PDF objects out of 1200 (max. 8388607)
+ 843 compressed objects within 9 object streams
+ 143 named destinations out of 1000 (max. 131072)
+ 209 words of extra memory for PDF output out of 10000 (max. 100000000)
 

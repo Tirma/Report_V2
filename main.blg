@@ -8,47 +8,48 @@ Repeated entry---line 153 of file biblio.bib
  :                 ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in Diener2017
+Warning--empty publisher in Glindemann
 Warning--empty journal in saviauk
 Warning--empty journal in tatulli
-You've used 7 entries,
+You've used 8 entries,
             2543 wiz_defined-function locations,
-            607 strings with 5877 characters,
-and the built_in function-call counts, 3129 in all, are:
-= -- 279
-> -- 217
-< -- 4
-+ -- 79
-- -- 79
-* -- 270
-:= -- 560
-add.period$ -- 22
-call.type$ -- 7
-change.case$ -- 63
-chr.to.int$ -- 7
-cite$ -- 10
-duplicate$ -- 101
-empty$ -- 178
-format.name$ -- 85
-if$ -- 593
+            613 strings with 6094 characters,
+and the built_in function-call counts, 3398 in all, are:
+= -- 301
+> -- 225
+< -- 5
++ -- 81
+- -- 81
+* -- 285
+:= -- 604
+add.period$ -- 25
+call.type$ -- 8
+change.case$ -- 67
+chr.to.int$ -- 8
+cite$ -- 12
+duplicate$ -- 117
+empty$ -- 203
+format.name$ -- 89
+if$ -- 647
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 39
-num.names$ -- 21
-pop$ -- 60
+missing$ -- 10
+newline$ -- 44
+num.names$ -- 24
+pop$ -- 70
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 76
 quote$ -- 0
-skip$ -- 76
+skip$ -- 86
 stack$ -- 0
-substring$ -- 118
-swap$ -- 4
-text.length$ -- 4
-text.prefix$ -- 2
+substring$ -- 125
+swap$ -- 5
+text.length$ -- 5
+text.prefix$ -- 3
 top$ -- 0
-type$ -- 48
-warning$ -- 3
-while$ -- 20
-width$ -- 8
-write$ -- 92
+type$ -- 52
+warning$ -- 4
+while$ -- 22
+width$ -- 9
+write$ -- 103
 (There was 1 error message)

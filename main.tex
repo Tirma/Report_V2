@@ -18,8 +18,8 @@
 \usepackage{pstricks}
 \usepackage{pst-optexp}
 %\usepackage{auto-pst-pdf}
-\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
-%\setmarginsrb{30mm}{20mm}{20mm}{20mm}{0pt}{0mm}{0pt}{0mm}
+%\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{1 cm}{1 cm}{1 cm}{1 cm}
 
 
 \usepackage{multicol}
@@ -189,10 +189,11 @@ Universität zu Köln}\\[5 cm]	% University Name
 \todo[inline]{- quoi qu’est-ce l’interferometrie, intérêt par rapport à l’observation par un télescope mono-pupille en terme
 de résolution angulaire
 - Theoreme de VCZ}
+\input{chapters/motivation.tex}
 
 \section{Simulation of the DBC}
     
-    The discrete beam combiner is a component made of multiple straight waveguides close to each other. It has been demonstrated that in the case of a $N$ telescope \gls{dbc}, an array of more than $N^2$ waveguides is needed for efficient operation of the \gls{dbc} \cite{minardi1}. But at this point is hasn't been studied the impact of other geometrical parameters such as the spacing between each waveguides. 
+    The discrete beam combiner is a component made of multiple straight single-mode waveguides close to each other. It has been demonstrated that in the case of a $N$ telescope \gls{dbc}, an array of more than $N^2$ waveguides is needed for efficient operation of the \gls{dbc} \cite{minardi1}. But at this point it hasn't been studied the impact of other geometrical parameters such as the spacing between each waveguides. 
     
     The component studied is formed of 23 outputs and four inputs to combine the light from four individual telescopes. A cross-section of it is shown on Fig. \ref{tikz:ZigZagCrossSection}. Both the input configuration and the "Zig-Zag" shape have already been optimised. After a brief explanation of the theory behind the \gls{dbc} we will focus on optimising it regarding $P_x$, $P_y$, $width$, $height$ and the length of the \gls{dbc} part (the notations refers to Fig. \ref{tikz:ZigZagCrossSection}) in the case of monochromatic light. In a second part the performances of the optimised component regarding the bandwidth of the input light are simulated. All simulation are performed using the commercial software Beamprop\textcompwordmark{} in scalar mode (a full-vectorial mode would have been more accurate but didn't show much different results for both TE and TM polarisation regarding the condition number of the \gls{V2PM} -see next section-), correlation mode and transparent boundary condition. The grid size was chosen as a balance between computation time and accuracy. The waveguides are simulated by a step-index core.
     \input{figures/DBC_fig.tex}
@@ -241,7 +242,7 @@ de résolution angulaire
     \input{chapters/condition.tex}
 \newpage
     \subsection{Simulated retrieved Phase and visibility}\label{an:retriev}
-    In order to compare the results of Fig.\ref{fig:retrieve_visi_expe} in a more readable way than with Fig.\ref{fig:retrieved_fan} the reader can see the results on the following plot.
+    In order to compare the results of Fig.\ref{fig:retrieved_visi_expe} in a more readable way than with Fig.\ref{fig:retrieved_fan} the reader can see the results on the following plot.
     \begin{figure}[htbp!]
      \centering
      \includegraphics[scale=.4]{../picture/retrieve_visi_simu.pdf}
