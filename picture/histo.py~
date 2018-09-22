@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+dir = "/home/thomas/Bureau/DBC/polychrom/no_fanout/inter_70_3365_3435_1pixel/"

@@ -38,18 +38,22 @@ where alpha is the angle between the line of sight and a point on the observed s
 
 This theorem explain the usability of interferometry to astronomical purpose but it doesn't explain it's main advantage : an increased angular resolution. 
 
-	\subsubsection{Spatial resolution}
-Lets now take a simplified example of an individual telescope whose pupil is a disk of diameter D. Fourier's optics tells us that the point spread function (PSF) of such an aperture is a function called Airy's function (see Fig\ref{fig:airy}). 
-
-In the case of 2 source observed, one can define the resolution of the telescope as its capacity to separate two punctual sources. This criterion is called the Rayleigh criterion and is defined as the angular separation such as the firts "0" of the image of the first source is at the position than the maximum of the image of the second source. This correspond to an angular resolution of $\Delta \alpha = \frac{1.22\lambda}{D}$. 
-
-One can also define the telescope by its optical transfer function. Doing so it is easy to show that the circular aperture act as a low pass filter (spatial frequency) with a cut off frequency of $f_c = \frac{D}{\lambda}$
-
-\todo[inline]{Cutt off freq and spatial resolution of the interferometric}
-
 \begin{figure}[htbp!]
 \centering
 \includegraphics[scale=.3]{../picture/airy.pdf}
 \caption{Left : Airy disk / PSF of a circular aperture. Center : Case of the Rayleigh criterion (resolved source). Right : case of an unresolved source}
 \label{fig:airy}
 \end{figure}
+
+	\subsubsection{Spatial resolution}
+Lets now take a simplified example of an individual telescope whose pupil is a disk of diameter D. Fourier's optics tells us that the point spread function (PSF) of such an aperture is a function called Airy's function (see Fig\ref{fig:airy}). 
+
+In the case of 2 source observed, one can define the resolution of the telescope as its capacity to separate two punctual sources. This criterion is called the Rayleigh criterion and is defined as the angular separation such as the first "0" of the image of the first source is at the position than the maximum of the image of the second source. This correspond to an angular resolution of $\Delta \alpha = \frac{1.22\lambda}{D}$. 
+
+One can also define the telescope by its optical transfer function. Doing so it is easy to show that the circular aperture act as a low pass filter (spatial frequency) with a cut off frequency of $f_c = \frac{D}{\lambda}$
+
+When it comes to interferometry with two telescopes separated by a distance $\vec{B}$ (speaking of the effective baseline) observing two stars of same flux separated by a distance $\vec{\rho}$, the visibility function is $\mu(\vec{f})=cos(\vec{f}\dot\vec{\rho})$ where $\vec{f}$ if the spatial frequency vector $\vec{f} = \frac{\vec{B}}{\lambda}$ ($\vec{B}$ and $\vec{\rho}$ are vectors defined in the observation plan). In the particular case where $\vec{\rho}= \frac{\lambda}{2\left|\vec{B}\right|} \frac{\vec{B}}{\left|\vec{B}\right|}$ the visibility is equal to zero. Therefore we can deduce that the interferometer formed by two telescopes separated by a distance B is equivalent to an individual telescope of diameter B.  
+
+An interferometer formed by two telescopes separated by a distance B has a resolution of $\frac{lambda}{2B}$ and give access to spatial frequency per $\frac{B}{\lambda}$ per radians of the source. To be able to fit models to measured visibility and to reconstruct an image of the observed object one must do measurements for as many baselines as possible (and also as as many wavelength as possible). The purpose of the work presented in this report is to develop a component able to combine at least 4 telescopes (6 different baselines) at the same time making it able to observe fast varying object.
+
+

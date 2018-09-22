@@ -8,6 +8,9 @@ second = 0
 x=[]
 y=[]
 
+def sincard(x,dsig):
+	return(np.sin(np.pi*dsig*x)/(np.pi*dsig*x))
+
 if simu:
 	with open("/home/thomas/Bureau/DBC/polychrom/no_fanout/inter_70_3365_3435_1pixel/Retrieved_data/BL12/BL12_phase.pickle",'rb') as f:
 		fig = pk.load(f)
@@ -512,7 +515,7 @@ if 0:
 		eval('ax'+str(i+1)+'.set_xlim('+str(s[i])+')')
 		eval('ax'+str(i+1)+'.set_ylim([-1,2*np.pi+1])')
 
-if 1:
+if 0:
 	with open("/home/thomas/Bureau/DBC_measurement/39_7_compressor/For_Retrieve/4BL_1/Retrieved/12.pickle",'rb') as f:
 		fig = pk.load(f)
 	ax = fig.get_axes()
@@ -620,4 +623,458 @@ if 1:
 		#eval('ax'+str(i+1)+'.set_title(r'+'"residute '+title[i]+'"'+')')
 		eval('ax'+str(i+1)+'.set_xlim('+str(s[i])+')')
 		eval('ax'+str(i+1)+'.set_ylim([-.2,3])')		
+
+if 0:
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL12.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL13.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL14.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL23.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL24.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL34.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	plt.close('all')
+
+	fig, ax = plt.subplots(2,3)#,figsize=(25,12))
+	ax1 = ax[0][0]
+	ax2 = ax[0][1]
+	ax3 = ax[0][2]
+	ax4 = ax[1][0]
+	ax5 = ax[1][1]
+	ax6 = ax[1][2]
+	
+	ytheo1 = np.linspace(2*np.pi,0,500)
+	ytheo2 = np.concatenate((ytheo1,ytheo1))
+	ytheo = np.concatenate((ytheo2,ytheo2))
+	ytheo = np.concatenate((ytheo,ytheo2))
+
+	xtheo = np.linspace(-11.235,11.235,len(ytheo))
+	
+	title = ["$V_{12}$","$V_{13}$","$V_{14}$","$V_{23}$","$V_{24}$","$V_{34}$"]
+	s = [[x[0][0],x[0][-1]],[x[1][0],x[1][-1]],[x[2][0],x[2][-1]],[x[3][0],x[3][-1]],[x[4][0],x[4][-1]],[x[5][0],x[5][-1]]]
+	s2 = np.array([256.39,200.12,67.8,280.74,139.04,41.1])
+	def std_me(x):
+		return np.sqrt(np.mean(abs(x)**2))
+
+	for i in range(6):
+		residute = []
+		close = []
+		for j in range(len(x[i])):
+			idx = np.where(abs(x[i][j]-xtheo-s2[i]) == np.min(abs(x[i][j]-xtheo-s2[i])))
+			close.append(idx[0][0])
+		#print(close)
+		
+		if i>3:
+			ytheo1 = np.linspace(0,2*np.pi,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))		
+		else:
+			ytheo1 = np.linspace(2*np.pi,0,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))				
+		
+		
+		eval('ax'+str(i+1)+'.plot(x['+str(i)+'],y['+str(i)+'],"+")')
+		if (i<=2):
+			ytheo = abs(sincard(np.array(x[i]),1.730118773e-3))
+			eval('ax'+str(i+1)+'.plot(x['+str(i)+'],ytheo,"--",linewidth=1)')
+		else:
+			eval('ax'+str(i+1)+'.plot(x['+str(i)+'],np.ones(len(x['+str(i)+'])),"--",linewidth=1)')
+
+		eval('ax'+str(i+1)+'.set_title(r'+'"'+title[i]+'"'+')')
+		#eval('ax'+str(i+1)+'.set_xlim(['+str(-5.6175+s[i])+','+str(5.6175+s[i])+'])')
+		#if  not(i<2 or i==3):
+	#	print(x[i][close][np.where(abs(residute)<1)])
+		#	eval('ax'+str(i+1)+'.plot((np.array(xtheo) + s2['+str(i)+'])[close][np.where(abs(residute)<2)],residute1,"--",label=r"$\sigma ={0:2f}$".format(std_me(residute1[np.where(abs(abs((np.array(xtheo) + s2[i])[close][np.where(abs(residute)<1)])-np.mean(s[i]))<5.6175)])))')
+		#	eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.plot(x['+str(i)+'],np.mean(y['+str(i)+'])*np.ones(len(x['+str(i)+'])),"--",label=r"$\sigma ={0:2f}$".format(std_me(y['+str(i)+']-np.mean(y['+str(i)+']))))')
+		#eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.set_title(r'+'"residute '+title[i]+'"'+')')
+		eval('ax'+str(i+1)+'.set_xlim('+str(s[i])+')')
+		eval('ax'+str(i+1)+'.set_ylim([-.2,1.5])')
+		
+
+if 0:
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL12.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL13.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL14.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL23.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL24.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL34.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	plt.close('all')
+
+	fig, ax = plt.subplots(2,3)#,figsize=(25,12))
+	ax1 = ax[0][0]
+	ax2 = ax[0][1]
+	ax3 = ax[0][2]
+	ax4 = ax[1][0]
+	ax5 = ax[1][1]
+	ax6 = ax[1][2]
+	
+	ytheo1 = np.linspace(2*np.pi,0,500)
+	ytheo2 = np.concatenate((ytheo1,ytheo1))
+	ytheo = np.concatenate((ytheo2,ytheo2))
+	ytheo = np.concatenate((ytheo,ytheo2))
+
+	xtheo = np.linspace(-11.235,11.235,len(ytheo))
+	
+	title = ["$V_{12}$","$V_{13}$","$V_{14}$","$V_{23}$","$V_{24}$","$V_{34}$"]
+	s = [[x[0][0],x[0][-1]],[x[1][0],x[1][-1]],[x[2][0],x[2][-1]],[x[3][0],x[3][-1]],[x[4][0],x[4][-1]],[x[5][0],x[5][-1]]]
+	s2 = np.array([256.39,200.12,67.8,280.74,139.04,41.1])
+	def std_me(x):
+		return np.sqrt(np.mean(abs(x)**2))
+
+	for i in range(6):
+		residute = []
+		close = []
+		for j in range(len(x[i])):
+			idx = np.where(abs(x[i][j]-xtheo-s2[i]) == np.min(abs(x[i][j]-xtheo-s2[i])))
+			close.append(idx[0][0])
+		#print(close)
+		
+		if i>3:
+			ytheo1 = np.linspace(0,2*np.pi,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))		
+		else:
+			ytheo1 = np.linspace(2*np.pi,0,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))				
+		
+		
+		eval('ax'+str(i+1)+'.plot(x['+str(i)+'],y['+str(i)+'],"+")')
+		if (i<=2):
+			ytheo = abs(sincard(np.array(x[i]),1.730118773e-3))
+			eval('ax'+str(i+1)+'.plot(x['+str(i)+'],ytheo,"--",linewidth=1)')
+		else:
+			eval('ax'+str(i+1)+'.plot(x['+str(i)+'],np.ones(len(x['+str(i)+'])),"--",linewidth=1)')
+
+		eval('ax'+str(i+1)+'.set_title(r'+'"'+title[i]+'"'+')')
+		#eval('ax'+str(i+1)+'.set_xlim(['+str(-5.6175+s[i])+','+str(5.6175+s[i])+'])')
+		#if  not(i<2 or i==3):
+	#	print(x[i][close][np.where(abs(residute)<1)])
+		#	eval('ax'+str(i+1)+'.plot((np.array(xtheo) + s2['+str(i)+'])[close][np.where(abs(residute)<2)],residute1,"--",label=r"$\sigma ={0:2f}$".format(std_me(residute1[np.where(abs(abs((np.array(xtheo) + s2[i])[close][np.where(abs(residute)<1)])-np.mean(s[i]))<5.6175)])))')
+		#	eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.plot(x['+str(i)+'],np.mean(y['+str(i)+'])*np.ones(len(x['+str(i)+'])),"--",label=r"$\sigma ={0:2f}$".format(std_me(y['+str(i)+']-np.mean(y['+str(i)+']))))')
+		#eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.set_title(r'+'"residute '+title[i]+'"'+')')
+		eval('ax'+str(i+1)+'.set_xlim('+str(s[i])+')')
+		eval('ax'+str(i+1)+'.set_ylim([-.2,1.5])')
+		
+if 0:
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL12_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL13_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL14_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL23_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL24_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4L_flat/Retrieved_data/4BL/BL34_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	plt.close('all')
+
+	fig, ax = plt.subplots(2,3)#,figsize=(25,12))
+	ax1 = ax[0][0]
+	ax2 = ax[0][1]
+	ax3 = ax[0][2]
+	ax4 = ax[1][0]
+	ax5 = ax[1][1]
+	ax6 = ax[1][2]
+	
+	ytheo1 = np.linspace(2*np.pi,0,500)
+	ytheo2 = np.concatenate((ytheo1,ytheo1))
+	ytheo = np.concatenate((ytheo2,ytheo2))
+	ytheo = np.concatenate((ytheo,ytheo2))
+
+	xtheo = np.linspace(-10.2,10.2,len(ytheo))
+	
+	title = ["$\phi_{12}$","$\phi_{13}$","$\phi_{14}$","$\phi_{23}$","$\phi_{24}$","$\phi_{34}$"]
+	s = [[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2]]
+	#s2 = np.array([.1,-.2,0,0,0,0])
+	s2 = np.array([-(360-10)*np.pi/180*3.4/(2*np.pi),-(-360+20)*np.pi/180*3.4/(2*np.pi),0,0,0,0])
+
+	def std_me(x):
+		return np.sqrt(np.mean(abs(x)**2))
+
+	for i in range(6):
+		residute = []
+		close = []
+		for j in range(len(x[i])):
+			idx = np.where(abs(x[i][j]-xtheo-s2[i]) == np.min(abs(x[i][j]-xtheo-s2[i])))
+			close.append(idx[0][0])
+		#print(close)
+		
+		if i>3:
+			ytheo1 = np.linspace(0,2*np.pi,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))		
+		else:
+			ytheo1 = np.linspace(2*np.pi,0,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))				
+		
+		if i==3:
+			ytheo = np.ones(len(ytheo))*np.pi/180*(360-30)
+		if i==4:
+			ytheo = np.ones(len(ytheo))*np.pi/180*(360-10)		
+		if i==5:
+			ytheo = np.ones(len(ytheo))*np.pi/180*(20)	
+		residute = np.array(ytheo)[close]-np.array(y[i])
+		residute1 = residute[np.where(abs(residute)<1)]
+		print(std_me(residute1[np.where(abs(abs((np.array(xtheo) + s2[i])[close][np.where(abs(residute)<1)])-np.mean(s[i]))<5.6175)]))
+		#plt.plot(residute), plt.show()
+		eval('ax'+str(i+1)+'.plot(x['+str(i)+'],y['+str(i)+'],"+")')
+		if  1:
+			eval('ax'+str(i+1)+'.plot(xtheo+'+str(s2[i])+',ytheo,"--",linewidth=1,label=r"$\sigma = {0:.2f}$".format(std_me(residute1[np.where(abs(abs((np.array(xtheo) + s2[i])[close][np.where(abs(residute)<1)])-np.mean(s[i]))<5.6175)])))')
+		eval('ax'+str(i+1)+'.set_title(r'+'"'+title[i]+'"'+')')
+		#eval('ax'+str(i+1)+'.set_xlim(['+str(-5.6175+s[i])+','+str(5.6175+s[i])+'])')
+		#if  not(i<2 or i==3):
+	#	print(x[i][close][np.where(abs(residute)<1)])
+		eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.plot(x['+str(i)+'],np.mean(y['+str(i)+'])*np.ones(len(x['+str(i)+'])),"--",label=r"$\sigma ={0:2f}$".format(std_me(y['+str(i)+']-np.mean(y['+str(i)+']))))')
+		eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.set_title(r'+'"residute '+title[i]+'"'+')')
+		eval('ax'+str(i+1)+'.set_xlim('+str(s[i])+')')
+		eval('ax'+str(i+1)+'.set_ylim([0-.5,2*np.pi+.5])')	
+		
+if 1:
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL12_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL13_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL14_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL23_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL24_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	
+	with open("/home/thomas/Bureau/DBC/20nm_4BL/4BL_no_fan/Retrieved_data/4BL/BL34_phase.pickle",'rb') as f:
+		fig = pk.load(f)
+	ax = fig.get_axes()
+	ax = ax[0]
+	ax = ax.get_children()[0]
+	x.append(ax.get_xdata())
+	y.append(ax.get_ydata())
+	plt.close('all')
+
+	fig, ax = plt.subplots(2,3)#,figsize=(25,12))
+	ax1 = ax[0][0]
+	ax2 = ax[0][1]
+	ax3 = ax[0][2]
+	ax4 = ax[1][0]
+	ax5 = ax[1][1]
+	ax6 = ax[1][2]
+	
+	ytheo1 = np.linspace(2*np.pi,0,500)
+	ytheo2 = np.concatenate((ytheo1,ytheo1))
+	ytheo = np.concatenate((ytheo2,ytheo2))
+	ytheo = np.concatenate((ytheo,ytheo2))
+
+	xtheo = np.linspace(-10.2,10.2,len(ytheo))
+	
+	title = ["$\phi_{12}$","$\phi_{13}$","$\phi_{14}$","$\phi_{23}$","$\phi_{24}$","$\phi_{34}$"]
+	s = [[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2],[-3.4*2,3.4*2]]
+	#s2 = np.array([.1,-.2,0,0,0,0])
+	s2 = np.array([-(360-10)*np.pi/180*3.4/(2*np.pi),-(-360+20)*np.pi/180*3.4/(2*np.pi),0,0,0,0])
+
+	def std_me(x):
+		return np.sqrt(np.mean(abs(x)**2))
+
+	for i in range(6):
+		residute = []
+		close = []
+		for j in range(len(x[i])):
+			idx = np.where(abs(x[i][j]-xtheo-s2[i]) == np.min(abs(x[i][j]-xtheo-s2[i])))
+			close.append(idx[0][0])
+		#print(close)
+		
+		if i>3:
+			ytheo1 = np.linspace(0,2*np.pi,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))		
+		else:
+			ytheo1 = np.linspace(2*np.pi,0,500)
+			ytheo2 = np.concatenate((ytheo1,ytheo1))
+			ytheo = np.concatenate((ytheo2,ytheo2))
+			ytheo = np.concatenate((ytheo,ytheo2))				
+		
+		if i==3:
+			ytheo = np.ones(len(ytheo))*np.pi/180*(360-30)
+		if i==4:
+			ytheo = np.ones(len(ytheo))*np.pi/180*(360-10)		
+		if i==5:
+			ytheo = np.ones(len(ytheo))*np.pi/180*(20)	
+		residute = np.array(ytheo)[close]-np.array(y[i])
+		residute1 = residute[np.where(abs(residute)<1)]
+		print(std_me(residute1[np.where(abs(abs((np.array(xtheo) + s2[i])[close][np.where(abs(residute)<1)])-np.mean(s[i]))<5.6175)]))
+		#plt.plot(residute), plt.show()
+		eval('ax'+str(i+1)+'.plot(x['+str(i)+'],y['+str(i)+'],"+")')
+		if  1:
+			eval('ax'+str(i+1)+'.plot(xtheo+'+str(s2[i])+',ytheo,"--",linewidth=1,label=r"$\sigma = {0:.2f}$".format(std_me(residute1[np.where(abs(abs((np.array(xtheo) + s2[i])[close][np.where(abs(residute)<1)])-np.mean(s[i]))<5.6175)])))')
+		eval('ax'+str(i+1)+'.set_title(r'+'"'+title[i]+'"'+')')
+		#eval('ax'+str(i+1)+'.set_xlim(['+str(-5.6175+s[i])+','+str(5.6175+s[i])+'])')
+		#if  not(i<2 or i==3):
+	#	print(x[i][close][np.where(abs(residute)<1)])
+		eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.plot(x['+str(i)+'],np.mean(y['+str(i)+'])*np.ones(len(x['+str(i)+'])),"--",label=r"$\sigma ={0:2f}$".format(std_me(y['+str(i)+']-np.mean(y['+str(i)+']))))')
+		eval('ax'+str(i+1)+'.legend()')
+		#eval('ax'+str(i+1)+'.set_title(r'+'"residute '+title[i]+'"'+')')
+		eval('ax'+str(i+1)+'.set_xlim('+str(s[i])+')')
+		eval('ax'+str(i+1)+'.set_ylim([0-.5,2*np.pi+.5])')	
+		
 plt.show()
