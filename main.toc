@@ -1,22 +1,22 @@
 \babel@toc {english}{}
-\contentsline {section}{List of Figures}{ii}{section*.2}
-\contentsline {section}{List of Tables}{v}{section*.3}
+\contentsline {section}{List of Figures}{iii}{section*.2}
+\contentsline {section}{List of Tables}{vi}{section*.3}
 \contentsline {section}{\numberline {1}Fundamentals of astro-interferometry}{1}{section.1}
 \contentsline {subsubsection}{\numberline {1.0.1}Mutual coherence function}{1}{subsubsection.1.0.1}
 \contentsline {subsubsection}{\numberline {1.0.2}Van Cittert-Zernike theorem}{2}{subsubsection.1.0.2}
 \contentsline {subsubsection}{\numberline {1.0.3}Spatial resolution}{3}{subsubsection.1.0.3}
-\contentsline {section}{\numberline {2}Simulation of the DBC}{4}{section.2}
+\contentsline {section}{\numberline {2}Simulation of the DBC}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Monochromatic light}{5}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Mathematical formalism}{5}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}Impact of evanescent coupling on the output power}{6}{subsubsection.2.1.2}
-\contentsline {paragraph}{Power of a Gaussian field :}{7}{section*.9}
+\contentsline {subsubsection}{\numberline {2.1.2}Impact of evanescent coupling on the output power}{7}{subsubsection.2.1.2}
+\contentsline {paragraph}{Power of a Gaussian field :}{8}{section*.9}
 \contentsline {paragraph}{Influence on the simulated phases relations :}{8}{section*.10}
-\contentsline {subsubsection}{\numberline {2.1.3}Influence of geometrical parameters}{8}{subsubsection.2.1.3}
-\contentsline {paragraph}{X and Y spacing:}{10}{section*.13}
-\contentsline {paragraph}{The cross section:}{12}{section*.16}
-\contentsline {paragraph}{Optical index difference:}{12}{section*.18}
+\contentsline {subsubsection}{\numberline {2.1.3}Influence of geometrical parameters}{10}{subsubsection.2.1.3}
+\contentsline {paragraph}{X and Y spacing:}{11}{section*.13}
+\contentsline {paragraph}{The cross section:}{11}{section*.16}
+\contentsline {paragraph}{Optical index difference:}{13}{section*.18}
 \contentsline {paragraph}{Lengths:}{13}{section*.21}
-\contentsline {subsubsection}{\numberline {2.1.4}Adding a <<fan out>>}{14}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.4}Adding a <<fan out>>}{15}{subsubsection.2.1.4}
 \contentsline {paragraph}{Effect of polarization on the retrieved parameters}{16}{section*.27}
 \contentsline {paragraph}{adaptability to other wavelength}{17}{section*.29}
 \contentsline {subsection}{\numberline {2.2}Polychromatic light}{19}{subsection.2.2}
@@ -24,12 +24,14 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Influence of the bandwidth on the V2PM}{20}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Retrieving the visibility function}{21}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}Retrieved visibility and phase using the 4 input beams}{23}{subsubsection.2.2.4}
-\contentsline {section}{\numberline {3}Laboratory characterization of the DBC}{26}{section.3}
-\contentsline {subsection}{\numberline {3.1}characterization setup and method}{26}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Retrieving the visibility function}{28}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Using two beams at a time}{28}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Combining the 4 beams}{30}{subsubsection.3.2.2}
-\contentsline {section}{\numberline {A}Appendix}{34}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}The condition number}{34}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2}Simulated retrieved Phase and visibility}{35}{subsection.A.2}
-\contentsline {section}{Bibliography}{37}{section*.53}
+\contentsline {section}{\numberline {3}Laboratory characterization of the DBC}{27}{section.3}
+\contentsline {subsection}{\numberline {3.1}characterization setup and method}{27}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Retrieving the visibility function}{29}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Using two beams at a time}{29}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Combining the 4 beams}{32}{subsubsection.3.2.2}
+\contentsline {paragraph}{Further work :}{35}{section*.49}
+\contentsline {section}{\numberline {A}Appendix}{37}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}The condition number}{37}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Simulated retrieved Phase and visibility}{38}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Gantt}{39}{subsection.A.3}
+\contentsline {section}{Bibliography}{41}{section*.55}

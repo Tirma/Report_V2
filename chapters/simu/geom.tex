@@ -1,6 +1,6 @@
 Knowing the problem exposed in the previous section, the "ideal" surface over which the power is calculated has to be estimated. Then the influence of the geometrical parameters on the performances (estimated by the condition number of the \gls{V2PM}) can be studied. 
 
-In all the following, the amplitude of visibility (or visibility) refers to $V_{ij}$ (sometimes to the all function $V_{ij}cos(\phi_{ij})$ where $\phi_{ij}$ is a function of the \gls{opd}. A good approximation of $\phi_{ij}$ is $\frac{2\pi x}{\lambda}$ where x is the \gls{opd}. $V$ and $\phi$ are both obtained by fitting the simulated curve with a cosine.
+In all the following, the amplitude of visibility (or visibility) refers to $V_{ij}$ (sometimes to the function $V_{ij}cos(\phi_{ij})$ where $\phi_{ij}$ is a function of the \gls{opd}. A good approximation of $\phi_{ij}$ is $\frac{2\pi x}{\lambda}$ where x is the \gls{opd}. $V$ and $\phi$ are both obtained by fitting the simulated photo-corrected curves with a cosine.
 
 
 To estimate the critical surface, the power at an output versus the \gls{opd} is simulated using the software $BeamProp^{TM}$. It has been found that the presence of harmonics in the signal should not be higher than 2\% of the main signal (the cosine). A surface corresponding to the waveguide's cross-section appeared to solve this problem for a wavelength of 3.8\si{\micro\meter} as shown on Fig.\ref{fig:harmonics}.   
@@ -25,21 +25,20 @@ To estimate the critical surface, the power at an output versus the \gls{opd} is
     power}
 \end{figure}
 
-All simulation unless explicitly written are performed using the previously determined integrating area. Moreover the base parameters : $P_x=24\si{\micro\meter}$, $P_y=10.8\si{\micro\meter}$,
+All simulations unless explicitly written are performed using the previously determined integrating area. Moreover the base parameters : $P_x=24\si{\micro\meter}$, $P_y=10.8\si{\micro\meter}$,
 $width=9.5\si{\micro\meter}$, $height=17\si{\micro\meter}$, $\delta n
 = 0.005$, $\lambda=3.4\si{\micro\meter}$, length of the DBC's part $= 25mm$, length of the input $=25mm$, together with transparent boundary
-condition. The grid dimensions and z step are chosen as a balance between computation time and desired accuracy. For general results one can
+condition are used. The grid dimensions and z step are chosen as a balance between computation time and desired accuracy. For general results one can
 choose a <<coarse>> grid and then narrow it for more accurate results.
 Results presented are for scalar solution of the wave equation. Therefore
 they do not incorporate impacts of polarization effects. Moreover the material are supposedly
 perfects in the simulation (i.e. isotropic material, no absorption, no scattering...).
 
-
 To ensure a good accuracy on the retrieved astronomical parameters,
 the V2PM's condition number must be as close to 1 as possible (see
 \ref{an:cond}). This part will be focused on lowering the V2PM's
 condition number by using different geometrical parameters. 
-The launch fields are Gaussian of same power and of 1/e diameters the
+The launch fields are Gaussian of same power and of 1/e diameter the
 width and height of the wave-guide. Thus a coupling loss of
 approximately 10\% occurs. Fresnel losses are not included.
 
@@ -118,7 +117,7 @@ $P_y=10.8\si{\micro\meter}$.
 
 One more time a minimum of the condition number is found for
 $width=7.5\si{\micro\meter}$ and
-$height=17\si{\micro\meter}$, but as such a width would lead to too much more refinance (which our simulation doesn't take into account) a width of $9.5 \si{\micro\meter}$ will be used instead. 
+$height=17\si{\micro\meter}$, but as such a width would lead to more birefringence (which our simulation doesn't take into account) a width of $9.5 \si{\micro\meter}$ will be used instead. 
 %\todo[inline]{Revoir la derniere phrase+plots ?}
 The throughput seems to be linear for dimensions of the wave-guides slightly different. But only for dimensions closes to the simulated ones.
 
@@ -146,7 +145,7 @@ are used (except for the width of the WGs which is $width=9.5\mu m$) and the thr
 \end{tabular}
 \caption{Condition number and throughput over the WG's cross-section
   for several values of $\delta n$. The throughput is calculated by the sum of the
-  power at each outputs normalized by the total input power. The power is calculated by a power integral of the simulated field over the wave-guide's cross-section}
+  power at each outputs normalized by the total input power. The power is calculated by a power integral of the simulated field over the wave-guide cross-section}
 \label{tab:cond_vs_delta_n}
 \end{table}
 
@@ -163,12 +162,12 @@ within the tested range (and only within the tested range)(see fig.\ref{fig:thro
 
 The condition number seems to be minimum for $\delta_n=0.004$ but as it
 is only of 1 lower than for $\delta_n=0.005$ and the throughput over
-the wave-guide's cross-section is 10\% greater in this case, $\delta_n=0.005$ would be used as
+the wave-guide cross-section is 10\% greater in this case, $\delta_n=0.005$ would be used as
 <<optimised>> optical index difference.
 
 \paragraph{Lengths:}
 An other parameter that has to be optimized is the length of the
-DBC's part. To this point all simulations were performed for a length
+DBC part. To this point all simulations were performed for a length
 of $25\si{\milli\meter}$. An other length that could be optimized is
 the length of the inputs which were also to this point of
 $25\si{\milli\meter}$, but as the x and y spacing of the inputs ensures
@@ -189,7 +188,7 @@ be seen in the figure \ref{fig:propagation_L}.
   \includegraphics[scale=.5]{picture/geometry/CondNvsL.png}
   \caption{Condition number of the V2PM matrix for different lengths
     of the DBC part. The power is calculated either over a 1 by 1
-    micrometer area or the <<1/e>> area centered on the
+    micrometer area or the <<1/e>> area centred on the
     cross-section. (see text for details)}
   \label{fig:length}
 \end{figure}
@@ -241,21 +240,21 @@ centered and no overlapping would occur at the output. The next section
 will focus on this component.
 
 \subsubsection{Adding a <<fan out>>}
-We have seen that both the visibility and phases relations are
+We have seen that both the visibilities and phases relations are
 dependent of the way the power is calculated. This is caused by the
 fields overlapping at the outputs. One way to get rid of this effect
 could be to add a <<fan out>> at the end of the DBC part and then be able to really take into account of all the flux when calculating the power. Simulations
 with this have been performed with a spacing of the outputs of 2 times
 the <<1/$e^3$>> width of the fundamental mode to be certain that no
-more overlapping will occur (see Fig. \ref{fig:outputfield}). The length of the fan-out is chosen in order to limit bending loses and 1 cm appeared to be enough. A short straight section of 2 mm is added in order that all the flux have enough length to be well centered in the WG. By doing this one can estimate the
+more overlapping will occur (see Fig. \ref{fig:outputfield}). The length of the fan-out is chosen in order to limit bending loses and 1 cm appeared to be enough. A short straight section of 2 mm is added in order that all the flux have enough length to be well centred in the WG. By doing this one can estimate the
 power in a wave-guide over a finite area and knowing which percentage
 of the power of a Gaussian field is contained in the same area,
-retrieve the total guided power (assuming that the fundamental mode is a Gaussien). But the point is that with such a
+retrieve the total guided power (assuming that the fundamental mode is a Gaussian). But the point is that with such a
 device, the way of calculating the power at the output should no more
-impact neither the visibility nor phases relations, ergo the V2PM condition number (as it is the case with the previous component for large integrating area).
+impact neither the visibility nor phase relations, ergo the V2PM condition number (as it is the case with the previous component for large integrating area).
 Therefore in these simulation the power is calculated by the power
 integral of the simulated field over the WG's cross-section.
-Results show that most of the visibility in that case are between
+Results show that most of the visibilities in that case are between
 0.98 and 1.00 (without any polarization effects they should be all of
 1) where they could be below 0.3 without the fan out.
 Moreover with the simulated design the fan-out lead to less than 3\%
@@ -270,9 +269,9 @@ low for the considered material (GLS) at this wavelength) etc... Losses are only
 the cladding, bending losses and coupling losses with the input field
 (which we managed to get below 1\% in this simulation).
 Moreover one can see that 68 is almost 71\% of 96.7 which is the
-percentage of the true centered Gaussian field's power calculated over
+percentage of the true centred Gaussian field's power calculated over
 the cross-section of the WG. This shows that at the outputs the fields
-should be mostly Gaussian centered fields thus the <<fan out>> might be well designed.
+should be mostly Gaussian centred fields thus the <<fan out>> might be well designed.
 
 \begin{figure}[htbp]
   \centering
@@ -323,8 +322,7 @@ the output doesn't impact much more the V2PM
 matrix, visibility and phases relations as can be seen on figure
 \ref{fig:visi_phases_area}. Of course the visibilities are still
 impacted but they still are greater than 95\% for the majority (and
-greater than 0.75). In the case without the fan-out the visibilities
-were down to 0.4 or less.
+greater than 0.75).
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[b]{.45\textwidth}
@@ -338,7 +336,7 @@ were down to 0.4 or less.
   \includegraphics[scale=.4]{picture/geometry/phases_flat_3area.png}
   \caption{}
   \end{subfigure}
-  \caption{Baseline 1-2 Visibilities (photometry corrected) and phases relations
+  \caption{Baseline 1-2 Visibilities and phases relations
     (referring to the first output) for 3 different area used to
     calculate the power at the outputs. The <<$1/e^3$>> correspond to
     an area of $27\times 35\si{\micro\meter}$, the <<1/e>> to an area of
@@ -352,7 +350,7 @@ were down to 0.4 or less.
 To this point no polarization effects has been simulated. In this part the V2PM matrix is calculated using monochromatic TE and TM polarized light. It is then studied the impact of using a TM polarization calibrated V2PM on the TE polarization data to retrieve the astronomical parameters (and vice et versa). 
 
 First of all the V2PM calibrated matrix using TE polarized light show a condition number of 6.203 and it is  6.124 for the TM polarized light. In the case of the scalar field (no polarization effect) the condition number was 6.161 which is almost the mean of TE and TM ones. 
-Those two V2PM matrices are used to retrieve the astronomical parameters from the simulated output fields. The results are shown in Tab.\ref{tab:retriev_polar} in which $\epsilon_i$ is calculated by $\epsilon_i=\sqrt{ \sum \frac{1}{N}(a-\tilde{a})^2}$  where $a$ is the data, $\tilde{a}$ the expected parameter (phase or visibility) and N the number of simulated phase and visibility.  One can see that the error on the retrieved parameters are between 30 and 40 times higher when using the V2PM calibrated using polarized light on 90° shifted polarized light.  The impact is still very low and justify not taking into account the polarization for the previous simulation.
+Those two V2PM matrices are used to retrieve the astronomical parameters from the simulated output fields. The results are shown in Tab.\ref{tab:retriev_polar} in which $\epsilon_i$ is calculated by $\epsilon_i=\sqrt{ \sum \frac{1}{N}(a-\tilde{a})^2}$  where $a$ is the data, $\tilde{a}$ the expected parameter (phase or visibility) and N the number of simulated phase and visibility.  One can see that the error on the retrieved parameters are between 30 and 40 times higher when using the V2PM calibrated using polarized light on 90 deg shifted polarized light.  The impact is still very low and justify not taking into account the polarization for the previous simulation.
 
 \begin{table}[]
 \begin{tabular}{|c|c|c|c|c|}\hline
@@ -369,7 +367,7 @@ TM                & $\num{0.0208}$              & $\num{0.0247}$    & $\num{0.00
 \end{table}
 
 \paragraph{adaptability to other wavelength}
-Before simulating the \gls{dbc} using poly-chromatic light the dependence of the design regarding the wavelength is tested. Of course to have a component that behave the same at an other wavelength one can simply multiply its dimensions by the ratio of the wavelength. But as a component will have to be used using poly-chromatic light it is interesting to see how the condition number is influenced for a given design by the wavelength. The design previously "optimized" is used for this simulation. The results of this simulation are shown in Fig.\ref{fig:cond_mono_multi}. As can be seen both of the curves are very similar in first sight. The component without fan-out show a flat curve for lambda ranging from 3.35 to 3.43 $\si{\micro\meter}$ where for the component with fan-out this "flat zone" almost doesn't exist. This suggest that the component without fan-out could be more stable than the component with. This can be explained by the fact that the geometry of the fan-out act like if the coupling length were longer. This apparent length is strongly dependent of the wavelength because the coupling of the fields between two nearby waveguides are strongly dependents of the wavelength. The zone where the WGs separates will couple a larger wavelength for a longer length because of the larger overlap integral between the two  individual WG's modes for higher wavelength. For further explanation on the coupled mode theory the reader can refers to \cite{saleh_teich, marcuse}.
+Before simulating the \gls{dbc} using poly-chromatic light the dependence of the design regarding the wavelength is tested. Of course to have a component that behave the same at an other wavelength one can simply multiply its dimensions by the ratio of the wavelength. But as a component will have to be used using poly-chromatic light it is interesting to see how the condition number is influenced for a given design by the wavelength. The design previously "optimized" is used for this simulation. The results of this simulation is shown in Fig.\ref{fig:cond_mono_multi}. As can be seen both of the curves are very similar at first sight. The component without fan-out show a flat curve for lambda ranging from 3.35 to 3.43 $\si{\micro\meter}$ where for the component with fan-out this "flat zone" almost doesn't exist. This suggest that the component without fan-out could be more stable than the component with. This can be explained by the fact that the geometry of the fan-out act like if the coupling length were longer. This apparent length is strongly dependent of the wavelength because the coupling of the fields between two nearby waveguides are strongly dependents of the wavelength. The zone where the WGs separates will couple a larger wavelength for a longer length because of the larger overlap integral between the two  individual WG's modes for higher wavelength. For further explanation on the coupled mode theory the reader can refers to \cite{saleh_teich, marcuse}.
 
 
 \begin{figure}

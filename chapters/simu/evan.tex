@@ -1,5 +1,5 @@
 
-The main principle behind the the \gls{dbc} being the coupling of electromagnetic fields, it is important to understand how much the area chosen to calculate the power at an output could affect the phases relations and visibility. This part focuses on this problem.
+The main principle behind the the \gls{dbc} being the coupling of electromagnetic fields, it is important to understand how much the area chosen to calculate the power at an output could affect the phases relations and visibilities. This part focuses on this problem.
 
 Considering  only 3 distinct wave-guides of the DBC Zig-Zag component. The cross section of each WG is a rectangle $width \times height$. In such a dielectric wave-guide, there is no analytical solution to the scalar wave equation but according to \cite{labeye} a good approximation of the transverse field profile is close to a gaussian :
 $$
@@ -19,7 +19,7 @@ We simulate this behaviour for the following parameters (in $\si{\micro\meter}$)
 \item[-] $\delta n$ = 0.005
 \end{itemize}
 In this case we have $\omega_x \approx 7.798$ and $\omega_y \approx
-10.114$. The resulting field for 3 outputs in phase and guiding the same
+10.114$ at lambda=3.4 $\mu m$ (from beam prop simulations). The resulting electric field for 3 outputs in phase and guiding the same
 power is shown in Fig. \ref{fig:3gauss}.
 
 \begin{figure}[htbp]
@@ -37,17 +37,17 @@ P \propto \iint_{\mathbb{R}^2}
   \Psi^*(x,y)\Psi_{sim}(x,y) dxdy
   \end{equation}
   where $\Psi_{sim}$ is the simulated
-output fields as shown on the upper figure. Actually the exact knowledge of the power guided through one individual output is not needed. But if the outputs are not in phase, estimating the "power" by the previous integral would lead to harmonic in the signal vs the \gls{opd}. Therefore the integration
+output fields as shown on the upper figure. Actually the exact knowledge of the power guided through one individual output is not needed. But if the outputs are not in phase, estimating the "power" by the previous integral would lead to harmonic in the signal vs the \gls{opd} due to the influence of the neighbouring wave-guides. Therefore the integration
 should be limited to a small area around the WG. In the next
 paragraph we verify the impact of this choice on the phases
-relations, instrumental visibility thus the \gls{V2PM}.
+relations and instrumental visibilities thus the \gls{V2PM}.
 
 \paragraph{Power of a Gaussian field :}
 
 For an isolated gaussian field the power $P$ is given by \[ \frac{P}{\Psi_0^2} \propto \iint_{\mathbb{R}^2} exp\left( \frac{-2x^2}{\omega_x^2} + \frac{-2y^2}{\omega_y^2} \right) dx dy = \frac{\pi}{2} \omega_x \omega_y\]
 In the case of our parameters the right hand is equal to 123.88
 $\si{\micro\meter}^2$  (a numerical
-integration using the composite trapezoidal rule lead to 123.76). By integrating the whole field as represented
+integration using the composite trapezoidal rule lead to 123.76 $\si{\micro\meter}^2$). By integrating the whole field as represented
 in Fig. \ref{fig:3gauss} over the cross-section we obtain 113.70 $\si{\micro\meter}^2$ but
 the truly guided power in the central wave-guide calculated over the
 cross-section should only be 87.39 $\si{\micro\meter}^2$ thus an error
@@ -57,7 +57,7 @@ wave-guide, and a maximal power in the two surrounding wave-guides we
 find a  guided power in the central wave-guide over the
 cross-section of 3.10 $\si{\micro\meter}^2$. It can easily be
 understood that the simulated (ergo the experimental) interferograms
-will depend of the considered area. The larger this area, the greater the impact of the surrounding wave-guides on the interferogram. In an other hand the smaller this area, the smaller the signal to noise ratio.
+will depend of the considered area (if the outputs signal aren't in phase). The larger this area, the greater the impact of the surrounding wave-guides on the interferogram. In an other hand the smaller this area, the smaller the signal to noise ratio.
 
 \paragraph{Influence on the simulated phases relations :}
 
@@ -74,8 +74,7 @@ mostly unchanged by the integrating area, but this is only the case
 for area slightly larger to the WG's cross section. Therefore it
 might be expected that the phase relation between outputs with
 comparable power magnitude will stay the same for low variation of the
-integrating area. The only changed parameter might be the Visibility
-but one can not conclude as the mean value, ergo the photometries changes too.
+integrating area. The only changed parameter might be the Visibilities.
 
 To this point we have only seen the impact of the integrating area when all outputs are guiding the same maximal power. It is now studied the impact on a low guided power in the middle WG
 comparatively to the left and right ones. Same phases are
@@ -109,5 +108,5 @@ shown in Fig. \ref{fig:phase_influence}
 As can be seen, the more the power difference between the middle WG
 and the sides WG and the larger the integrating area, the more
 impacted the retrieved phase differences. Therefore it seems that the V2PM matrix of the component should be calculated not only for the isolated component but also with the imaging system. One way to get rid of these dependency would be to have a greater spacing between the WG at the output so that the evanescent coupling is as low as possible (as shown in Fig. \ref{fig:forfanout}). Thus the use of a
-<<fan out>> could be an option to calculate the power over a larger area thus have  a greater integrated power
+<<fan out>> could be an option to calculate the power over a larger area and have  a greater integrated power
 (ergo a smaller signal to noise ratio (SNR)).

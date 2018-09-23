@@ -1,0 +1,171 @@
+\documentclass[a4paper,twoside,11pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[noadjust]{cite}
+\usepackage{todonotes}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{tikz}
+\usepackage{pstricks}
+\usepackage{pst-optexp}
+%\usepackage{auto-pst-pdf}
+%\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{1 cm}{1 cm}{1 cm}{1 cm}
+
+
+\usepackage{multicol}
+%\usepackage{nonfloat}
+
+%\usepackage{amsfont}
+\usepackage{amssymb}
+
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+
+\usepackage[scientific-notation=true]{siunitx}
+\usepackage{subcaption}
+%\usepackage[table,xcdraw]{xcolor}
+%\usepackage[squaren,Gray]{SIunits}
+\usepackage{todonotes}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage{glossaries}
+\makeglossaries
+\input{glossaire.gls}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO,RE]{\rightmark}
+
+\title{Simulation and characterization of integrated optics beam combiners for astrointerferometry}								% Title
+\author{Thomas Poletti}								% Author
+\date{\today}											% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\graphicspath{ {images/} }
+
+\newcommand\frontmatter{%
+    \clearpage
+  %\@mainmatterfalse
+  \pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+    \clearpage
+ % \@mainmattertrue
+  \pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+  \if@openright
+    \clearpage
+  \else
+    \clearpage
+  \fi
+ % \@mainmatterfalse
+   }
+
+   
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[nottoc]{tocbibind}
+
+
+
+
+\makeglossary
+
+\begin{document}
+
+%\listoftodos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+	\begin{minipage}{0.5\textwidth}
+		\begin{flushleft} 
+    %\vspace*{0.5 cm}
+    \includegraphics[scale = 0.6]{phelma.png}\\[1.0 cm]	% University Logo
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.5\textwidth}
+            
+			\begin{flushright} 
+    
+    %\vspace*{0.5 cm}
+    \includegraphics[scale = .9]{university.png}\\[1.0 cm]	% University Logo
+		\end{flushright}
+        
+	\end{minipage}\\[3 cm]
+	
+    \centering
+    \vspace*{0.5 cm}
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+    \textsc{\Large I. Physikalisches Institut \\
+Universität zu Köln}\\[5 cm]	% University Name
+	%\textsc{\Large Grenoble INP-Phelma}\\[0.5 cm]				% Course Code
+
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Author :} \\
+			Thomas Poletti\\
+  %           13103057\\
+          M1 Physics and NanoSciences\\
+          School-year 2017-2018\\
+   %         Semester\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+   			\emph{Supervisor:}\\
+			Pr. Dr. Lucas Labadie\\
+            labadie@ph1.uni-koeln.de\\
+		\end{flushright}
+        
+	\end{minipage}\\[2 cm]
+	
+    
+    
+	
+\end{titlepage}
+
+\renewcommand{\abstractname}{Résumé}
+\begin{abstract}
+   Les astronomes ont toujours essayé de voir de plus en plus loin dans l'espace avec une résolution de plus en plus élevée. Les progrès de la technologie ont récemment rendu possible l'utilisation de l'interférométrie afin d'atteindre une résolution angulaire élevée pour l'astronomie. En effet, la résolution d'un interféromètre formé par deux télescopes individuels ne dépend que du rapport entre la longueur d'onde observée et la séparation de ces télescopes. Comparé aux plus grands télescopes monopupilles (diamètre de $\approx$ 10m) le pouvoir de résolution de télescopes séparés par quelques centaines de mètres est supérieur de plus d'un ordre de grandeur. Cette résolution est particulièrement augmentée pour les grandes longueurs d'onde, ce qui fait de l'astro-interférométrie une méthode "hot" pour observer les objets froids. Jusqu'à récemment, les instruments combinant les télescopes étaient fabriqués avec de l'optique fibrée, ce qui donnait des instruments encombrants, nécessitant des étalonnages réguliers. Les progrès récents de l'inscription laser ultrarapide (ULI) ont donné naissance à une nouvelle génération d'instruments offrant déjà des résultats de haute qualité sur le ciel. 
+	
+	La nécessité de combiner autant de télescopes que possible en même temps a donné lieu à différentes géométries d'instruments, celle étudiée dans ce rapport est le "Zig-Zag array". Pour ce besoin, j'ai simulé et optimisé ce composant et les simulations ont démontré des capacités de contraste élevées et une transmission supérieure à $90\%$. Les simulations ont montré une précision sur la visibilité jusqu'à $\pm 5\%$ et une précision sur la phase jusqu'à $\pm 0.05 rad$ en utilisant un signal de bande spectrale 20nm et en combinant 4 télescopes en même temps. Plus important encore, les résultats expérimentaux ont montré des précisions similaires en combinant simultanément deux faisceaux avec un signal de largeur de bande spectrale 70 nm. Les facteurs limitants ont été identifiés et doivent maintenant être étudiés afin d'atteindre une précision sans précédent. 
+	
+	Les résultats présentés montrent que ces instruments sont bien adaptés à la combinaison interférométrique d'au moins 4 télescopes pour obtenir une reconstruction d'image de haute qualité. Sa conception est bien adaptable à toutes les longueurs d'onde de l'infrarouge proche à moyen.
+\end{abstract}
+\end{document}

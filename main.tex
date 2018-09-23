@@ -162,14 +162,40 @@ Universität zu Köln}\\[5 cm]	% University Name
 
 \frontmatter
 \begin{abstract}
-   abstract-text
+	Astronomers always tried to see further and further in space with higher and higher resolution. The advances in technology have recently made possible the use of interferometry in order to reach high angular resolution for the purpose of astronomy. Indeed the resolution of an interferometer formed by two individual telescopes only depends of the ratio between the wavelength observed and the separation of these telescopes. Compared to the largest single telescopes (diameter of $\approx$ 10m) the resolution power of telescopes separated by a few hundreds meters are higher by more than an order of magnitude. This resolution is particularly increased for long wavelength making astrointerferometry a "hot" method to observe cold objects. Until recently the instruments combining the telescopes were made with bulks optics resulting to cumbersome and unstable instruments requiring lots of calibrations. The recent advances in Ultrafast Laser Inscription (ULI) have resulted in a new generation of instruments already delivering high quality results on sky. 
+
+	The needs to combine as many telescopes as possible at the same times have resulted in different beam combiners geometry, the one studied in this report is the Zig-Zag array. To these needs I simulated and optimized this component and simulations have demonstrated high contrast capabilities and throughput greater than $90\%$. The simulated retrieved astronomical parameters have resulted to visibility accuracy at $\pm 5\%$ and phase accuracy up to $\pm 0.05 rad$ using a signal spectral bandwidth of 20nm centred at 3.4 $\mu m$ and combining 4 telescopes at the same time. More importantly experimental results have shown similar results when combining two beams at a time with a signal of spectral bandwidth 70nm. Limiting factors have been identified and must now be studied in order to reach unprecedented accuracy. 
+
+	The results presented demonstrate that such \gls{DBC} are well suited for interferometric combination of at least 4 telescopes to achieve high quality image reconstruction. Its design is well adaptable to all near to mid-infrared wavelengths.
 \end{abstract}
 \renewcommand{\abstractname}{Résumé}
 \begin{abstract}
-   Résumé ici
+   Les astronomes ont toujours essayé de voir de plus en plus loin dans l'espace avec une résolution de plus en plus élevée. Les progrès de la technologie ont récemment rendu possible l'utilisation de l'interférométrie afin d'atteindre une résolution angulaire élevée pour l'astronomie. En effet, la résolution d'un interféromètre formé par deux télescopes individuels ne dépend que du rapport entre la longueur d'onde observée et la séparation de ces télescopes. Comparé aux plus grands télescopes monopupilles (diamètre de $\approx$ 10m) le pouvoir de résolution de télescopes séparés par quelques centaines de mètres est supérieur de plus d'un ordre de grandeur. Cette résolution est particulièrement augmentée pour les grandes longueurs d'onde, ce qui fait de l'astro-interférométrie une méthode "hot" pour observer les objets froids. Jusqu'à récemment, les instruments combinant les télescopes étaient fabriqués avec de l'optique fibrée, ce qui donnait des instruments encombrants, nécessitant des étalonnages réguliers. Les progrès récents de l'inscription laser ultrarapide (ULI) ont donné naissance à une nouvelle génération d'instruments offrant déjà des résultats de haute qualité sur le ciel. 
+	
+	La nécessité de combiner autant de télescopes que possible en même temps a donné lieu à différentes géométries d'instruments, celle étudiée dans ce rapport est le "Zig-Zag array". Pour ce besoin, j'ai simulé et optimisé ce composant et les simulations ont démontré des capacités de contraste élevées et une transmission supérieure à $90\%$. Les simulations ont montré une précision sur la visibilité jusqu'à $\pm 5\%$ et une précision sur la phase jusqu'à $\pm 0.05 rad$ en utilisant un signal de bande spectrale 20nm et en combinant 4 télescopes en même temps. Plus important encore, les résultats expérimentaux ont montré des précisions similaires en combinant simultanément deux faisceaux avec un signal de largeur de bande spectrale 70 nm. Les facteurs limitants ont été identifiés et doivent maintenant être étudiés afin d'atteindre une précision sans précédent. 
+	
+	Les résultats présentés montrent que ces instruments sont bien adaptés à la combinaison interférométrique d'au moins 4 télescopes pour obtenir une reconstruction d'image de haute qualité. Sa conception est bien adaptable à toutes les longueurs d'onde de l'infrarouge proche à moyen.
 \end{abstract}
 \renewcommand{\abstractname}{Introduction}
 
+\renewcommand{\abstractname}{Présentation du lieu du stage}
+\begin{abstract}
+   Le stage s'est déroulé au premier institut de physique de l'université de Cologne. Ce laboratoire est composé de 6 groupes de recherche travaillant sur des thématiques propres à l'astronomie dont les principales sont :
+\begin{itemize}
+\item L'enseignement 
+\item L'astronomie observationelle
+\item L'instrumentation
+\item La modelisation numérique
+\end{itemize}
+Le laboratoire acceuille 6 professeurs permanents et plus de 150 chercheurs, ingénieurs, doctorants étudiants et personnel administratif. 
+J'ai été acceuilli dans le groupe de Lucas Labadie, Professeur à l'université de Cologne, j'ai travaillé sur la thématique de l'instrumentation astronomique dans le domaine infrarouge.
+ Le travail que j'ai effectué se situe dans la continuité de celui du Dr. Jan Tepper avec qui j'ai beaucoup colaboré. J'ai également travaillé avec Dominik Strixner, étudiant effectuant sa thèse de master pour la carectérisation expérimentale des MMIs et coupleurs assymetriques. 
+J'ai également colaboré avec un étudiant en thèse au laboratoire de physique de Postdam, qui travaille sur le même type de composants. Ce groupe collabore avec plusieurs laboratoires dont les laboratoires de Postdam, de Iena d'où provient le DBC caractérisé dans ce rapport et le laboratoire de Sydney d'où sont issus les échantillons les plus récents (MMIs, ABCD, Coupleurs...). 
+
+L'organisation hiérarchique est la suivante : les professeurs dirigent leurs groupes constitués de chercheurs, ingénieurs et doctorants. Ils travaillent sur différentes thématiques propres au groupe. Chaque groupe peut travailer sur plusieurs des 4 thématiques  citées plus haut. Tout groupe fait de l'enseignement. L'organisation du travail est laissée à la libre convenance des chercheurs.
+
+\end{abstract}
+\renewcommand{\abstractname}{Introduction}
 \newpage
 \tableofcontents
 \listoffigures
@@ -186,16 +212,18 @@ Universität zu Köln}\\[5 cm]	% University Name
 
 \input{chapters/motivation.tex}
 
+\newpage
 \section{Simulation of the DBC}
     
     The discrete beam combiner is a component made of multiple straight single-mode waveguides close to each other. It has been demonstrated that in the case of a $N$ telescope \gls{dbc}, an array of more than $N^2$ waveguides is needed for efficient operation of the \gls{dbc} \cite{minardi1}. But at this point it hasn't been studied the impact of other geometrical parameters such as the spacing between each waveguides. 
     
-    The component studied is formed of 23 outputs and four inputs to combine the light from four individual telescopes. A cross-section of it is shown on Fig. \ref{tikz:ZigZagCrossSection}. Both the input configuration and the "Zig-Zag" shape have already been optimised. After a brief explanation of the theory behind the \gls{dbc} we will focus on optimising it regarding $P_x$, $P_y$, $width$, $height$ and the length of the \gls{dbc} part (the notations refers to Fig. \ref{tikz:ZigZagCrossSection}) in the case of monochromatic light. In a second part the performances of the optimised component regarding the bandwidth of the input light are simulated. All simulation are performed using the commercial software Beamprop\textcompwordmark{} in scalar mode (a full-vectorial mode would have been more accurate but didn't show much different results for both TE and TM polarisation regarding the condition number of the \gls{V2PM} -see next section-), correlation mode and transparent boundary condition. The grid size was chosen as a balance between computation time and accuracy. The waveguides are simulated by a step-index core.
+    The component studied is formed of 23 outputs and four inputs to combine the light from four individual telescopes. A cross-section of it is shown on Fig. \ref{tikz:ZigZagCrossSection}. Both the input configuration and the "Zig-Zag" shape have already been optimised. After a brief explanation of the theory behind the \gls{dbc} we will focus on optimising it regarding $P_x$, $P_y$, $width$, $height$ and the length of the \gls{dbc} part (the notations refers to Fig. \ref{tikz:ZigZagCrossSection}) in the case of monochromatic light. In a second part the performances of the optimised component regarding the bandwidth of the input light are simulated. All simulation are performed using the commercial software Beamprop\textcompwordmark{} in scalar mode (a full-vectorial mode would have been more accurate but didn't show much different results for both TE and TM polarisation regarding the condition number of the \gls{V2PM} -see next section-), correlation mode and transparent boundary condition. The grid size was chosen as a balance between computation time and accuracy. The waveguides are simulated by a step-index core. All simulations doesn't include material dispersion as it is negligible compared to the effects of the geometry in the GLS.
+    
     \input{figures/DBC_fig.tex}
 
     \subsection{Monochromatic light}
 
-    In this section is shown the impact on the performances of the \gls{dbc} regarding its geometry. Two main parameters are studied, the condition number of the \gls{V2PM} and the throughput as it hadn't been done before. 
+    In this section is shown the impact on the performances of the \gls{dbc} regarding its geometry. Two main parameters are studied, the condition number of the \gls{V2PM} and the throughput as it hasn't been done before. 
         \subsubsection{Mathematical formalism}\label{sec:mathmono}
         \input{chapters/simu/math_mono.tex}
         
@@ -207,7 +235,7 @@ Universität zu Köln}\\[5 cm]	% University Name
         
        % \subsubsection{Retrieving the visibility function}
        % \input{chapters/simu/retriev_mono.tex}
-    
+\newpage 
     \subsection{Polychromatic light}
     In order to keep a high enough \gls{snr} and also for different needing, the component will be used under poly-chromatic light. In the case of poly-chromatic light, the previous mathematical formalism doesn't hold anymore. In this section will be shown the limitation of the previous formalism, studied the impact of the bandwidth both on the V2MP's condition number and the retrieved mutual coherence function. Experimental results will then be compared to the simulated ones. 
     
@@ -219,7 +247,7 @@ Universität zu Köln}\\[5 cm]	% University Name
         
         \subsubsection{Retrieving the visibility function}
         \input{chapters/simu/retriev_poly.tex}
-
+\newpage
 \section{Laboratory characterization of the DBC}
 
     \subsection{characterization setup and method}
@@ -227,8 +255,11 @@ Universität zu Köln}\\[5 cm]	% University Name
     \subsection{Retrieving the visibility function}
     
     \input{chapters/retriev_expe.tex}
-    
+
+\newpage   
 \section*{Conclusion and Further-work}
+	\input{conclusion.tex}
+
 
 \backmatter
 \appendix
@@ -241,16 +272,35 @@ Universität zu Köln}\\[5 cm]	% University Name
     \begin{figure}[htbp!]
      \centering
      \includegraphics[scale=.4]{../picture/retrieve_visi_simu.pdf}
-     \caption{The simulated retrieved visibilities of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_visi_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.}
+     \caption{The simulated retrieved visibilities of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in $\mu$m and the y-axis the visibility. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_visi_expe}.The blue line is the actual retrieved data and the orange line the theoretical result.}
      \label{an:retrieved_visi_simu}
     \end{figure}
     
     \begin{figure}[htbp!]
      \centering
      \includegraphics[scale=.4]{../picture/retrieve_phase_simu.pdf}
-     \caption{The simulated retrieved phases of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in µm and the y-axis the phase in rad. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_phase_expe}.The blue line is the actual retrieved data the orange line the theoretical result and the green line the residues (difference between the blue and orange one). $\sigma$ is the standard deviation to 0 of the residues in rad.}
+     \caption{The simulated retrieved phases of the optimised component at $\lambda=3.4\si{\micro\meter}$ and bandwidth=70nm. The x-axis is the OPD in $\mu$m and the y-axis the phase in rad. Baseline numbering follows the ones from Fig.\ref{fig:retrieved_phase_expe}.The blue line is the actual retrieved data the orange line the theoretical result and the green line the residues (difference between the blue and orange one). $\sigma$ is the standard deviation to 0 of the residues in rad.}
      \label{an:retrieved_phase_simu}
     \end{figure}
+
+\newpage
+\subsection{Gantt}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[scale=.5]{../picture/gantt.png}
+\end{figure}
+
+Items are :
+\begin{itemize}
+\item[-] Recherche Biblio / Prise en main de Beamprop
+\item[-]Simulation du tricoupleur / faisabilité d'un ABC
+\item[-]Simulation du DBC - monochromatique
+\item[-]Simulation du DBC - polychromatique
+\item[-]Caracterisation et simulation coupleurs assymetriques.
+\item[-]Test divers sur la V2PM et le DBC (17 guides...)
+\item[-]Realignement du banc optique, 4 faisceaux
+\item[-]Lab caracterisation des MMIs et du DBC
+\end{itemize}
 
 \newpage
 \printglossary
